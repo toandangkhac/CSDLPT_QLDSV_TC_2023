@@ -1,6 +1,6 @@
 ﻿namespace QLDSV_TC
 {
-    partial class FormDangNhap
+    partial class frmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,17 @@
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtLog = new DevExpress.XtraEditors.TextEdit();
+            this.txtLogin = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtPass = new DevExpress.XtraEditors.TextEdit();
             this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLog.Properties)).BeginInit();
+            this.radSinhVien = new System.Windows.Forms.RadioButton();
+            this.radGiangVien = new System.Windows.Forms.RadioButton();
+            this.btnQuenMK = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -48,16 +50,17 @@
             // cmbKhoa
             // 
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(195, 36);
+            this.cmbKhoa.Location = new System.Drawing.Point(223, 76);
             this.cmbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(391, 24);
             this.cmbKhoa.TabIndex = 0;
+            this.cmbKhoa.Text = "-- Chọn khoa --";
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(138, 36);
+            this.labelControl1.Location = new System.Drawing.Point(142, 76);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(28, 16);
             this.labelControl1.TabIndex = 1;
@@ -66,24 +69,24 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(114, 98);
+            this.labelControl2.Location = new System.Drawing.Point(133, 127);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 16);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Tài khoản";
             this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
-            // txtLog
+            // txtLogin
             // 
-            this.txtLog.EditValue = "lnkt-pgv";
-            this.txtLog.Location = new System.Drawing.Point(195, 92);
-            this.txtLog.Name = "txtLog";
-            this.txtLog.Size = new System.Drawing.Size(391, 22);
-            this.txtLog.TabIndex = 3;
+            this.txtLogin.EditValue = "";
+            this.txtLogin.Location = new System.Drawing.Point(223, 124);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(391, 22);
+            this.txtLogin.TabIndex = 3;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(114, 149);
+            this.labelControl3.Location = new System.Drawing.Point(133, 178);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(52, 16);
             this.labelControl3.TabIndex = 4;
@@ -92,8 +95,8 @@
             // 
             // txtPass
             // 
-            this.txtPass.EditValue = "123456";
-            this.txtPass.Location = new System.Drawing.Point(195, 143);
+            this.txtPass.EditValue = "";
+            this.txtPass.Location = new System.Drawing.Point(223, 175);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(391, 22);
@@ -109,6 +112,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(520, 269);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(94, 29);
@@ -117,49 +121,81 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.txtLog);
+            this.panelControl1.Controls.Add(this.radSinhVien);
+            this.panelControl1.Controls.Add(this.radGiangVien);
+            this.panelControl1.Controls.Add(this.btnQuenMK);
+            this.panelControl1.Controls.Add(this.txtLogin);
+            this.panelControl1.Controls.Add(this.btnLogin);
             this.panelControl1.Controls.Add(this.cmbKhoa);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.txtPass);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl3);
-            this.panelControl1.Location = new System.Drawing.Point(137, 142);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(681, 201);
+            this.panelControl1.Size = new System.Drawing.Size(1000, 562);
             this.panelControl1.TabIndex = 8;
             // 
-            // simpleButton1
+            // radSinhVien
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(311, 406);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "Đăng nhập";
+            this.radSinhVien.AutoSize = true;
+            this.radSinhVien.Location = new System.Drawing.Point(438, 30);
+            this.radSinhVien.Name = "radSinhVien";
+            this.radSinhVien.Size = new System.Drawing.Size(82, 20);
+            this.radSinhVien.TabIndex = 14;
+            this.radSinhVien.TabStop = true;
+            this.radSinhVien.Text = "Sinh Viên";
+            this.radSinhVien.UseVisualStyleBackColor = true;
+            this.radSinhVien.CheckedChanged += new System.EventHandler(this.radSinhVien_CheckedChanged);
             // 
-            // simpleButton2
+            // radGiangVien
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(541, 406);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton2.TabIndex = 10;
-            this.simpleButton2.Text = "Thoát";
+            this.radGiangVien.AutoSize = true;
+            this.radGiangVien.Checked = true;
+            this.radGiangVien.Location = new System.Drawing.Point(281, 30);
+            this.radGiangVien.Name = "radGiangVien";
+            this.radGiangVien.Size = new System.Drawing.Size(87, 20);
+            this.radGiangVien.TabIndex = 13;
+            this.radGiangVien.TabStop = true;
+            this.radGiangVien.Text = "Giảng viên";
+            this.radGiangVien.UseVisualStyleBackColor = true;
             // 
-            // FormDangNhap
+            // btnQuenMK
             // 
+            this.btnQuenMK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnQuenMK.Location = new System.Drawing.Point(459, 232);
+            this.btnQuenMK.Name = "btnQuenMK";
+            this.btnQuenMK.Size = new System.Drawing.Size(155, 29);
+            this.btnQuenMK.TabIndex = 15;
+            this.btnQuenMK.Text = "Quên mật khẩu";
+            this.btnQuenMK.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(223, 232);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(145, 29);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
+            // frmDangNhap
+            // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDangNhap);
             this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormDangNhap";
+            this.Name = "frmDangNhap";
             this.Text = "FormDangNhap";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormDangNhap_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtLog.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -173,13 +209,15 @@
         private System.Windows.Forms.ComboBox cmbKhoa;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtLog;
+        private DevExpress.XtraEditors.TextEdit txtLogin;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtPass;
         private DevExpress.XtraEditors.SimpleButton btnDangNhap;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
+        private DevExpress.XtraEditors.SimpleButton btnQuenMK;
+        private System.Windows.Forms.RadioButton radSinhVien;
+        private System.Windows.Forms.RadioButton radGiangVien;
     }
 }
