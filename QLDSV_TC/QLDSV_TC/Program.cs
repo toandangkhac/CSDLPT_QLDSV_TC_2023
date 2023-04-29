@@ -124,7 +124,7 @@ namespace QLDSV_TC
             Application.SetCompatibleTextRenderingDefault(false);
             frmDN = new frmDangNhap();
             Application.Run(frmDN);
-            
+            //Application.Run(new frmLop());
 
         }
 

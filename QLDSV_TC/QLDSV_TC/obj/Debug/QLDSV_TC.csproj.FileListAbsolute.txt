@@ -138,3 +138,5 @@ D:\tailieuNam3_HK2\CSDL_phantan\project_github\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLD
 D:\tailieuNam3_HK2\CSDL_phantan\project_github\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
 D:\tailieuNam3_HK2\CSDL_phantan\project_github\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmLop.resources
 D:\tailieuNam3_HK2\CSDL_phantan\project_github\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmMonHoc.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmLopTinChi.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmLoptEST.resources

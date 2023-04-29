@@ -50,7 +50,7 @@
             // cmbKhoa
             // 
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(223, 76);
+            this.cmbKhoa.Location = new System.Drawing.Point(161, 92);
             this.cmbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(391, 24);
@@ -60,7 +60,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(142, 76);
+            this.labelControl1.Location = new System.Drawing.Point(80, 92);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(28, 16);
             this.labelControl1.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(133, 127);
+            this.labelControl2.Location = new System.Drawing.Point(71, 143);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 16);
             this.labelControl2.TabIndex = 2;
@@ -79,14 +79,14 @@
             // txtLogin
             // 
             this.txtLogin.EditValue = "";
-            this.txtLogin.Location = new System.Drawing.Point(223, 124);
+            this.txtLogin.Location = new System.Drawing.Point(161, 140);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(391, 22);
             this.txtLogin.TabIndex = 3;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(133, 178);
+            this.labelControl3.Location = new System.Drawing.Point(71, 194);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(52, 16);
             this.labelControl3.TabIndex = 4;
@@ -96,7 +96,7 @@
             // txtPass
             // 
             this.txtPass.EditValue = "";
-            this.txtPass.Location = new System.Drawing.Point(223, 175);
+            this.txtPass.Location = new System.Drawing.Point(161, 191);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(391, 22);
@@ -134,13 +134,13 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1000, 562);
+            this.panelControl1.Size = new System.Drawing.Size(682, 353);
             this.panelControl1.TabIndex = 8;
             // 
             // radSinhVien
             // 
             this.radSinhVien.AutoSize = true;
-            this.radSinhVien.Location = new System.Drawing.Point(438, 30);
+            this.radSinhVien.Location = new System.Drawing.Point(376, 46);
             this.radSinhVien.Name = "radSinhVien";
             this.radSinhVien.Size = new System.Drawing.Size(82, 20);
             this.radSinhVien.TabIndex = 14;
@@ -153,7 +153,7 @@
             // 
             this.radGiangVien.AutoSize = true;
             this.radGiangVien.Checked = true;
-            this.radGiangVien.Location = new System.Drawing.Point(281, 30);
+            this.radGiangVien.Location = new System.Drawing.Point(219, 46);
             this.radGiangVien.Name = "radGiangVien";
             this.radGiangVien.Size = new System.Drawing.Size(87, 20);
             this.radGiangVien.TabIndex = 13;
@@ -164,7 +164,7 @@
             // btnQuenMK
             // 
             this.btnQuenMK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnQuenMK.Location = new System.Drawing.Point(459, 232);
+            this.btnQuenMK.Location = new System.Drawing.Point(397, 248);
             this.btnQuenMK.Name = "btnQuenMK";
             this.btnQuenMK.Size = new System.Drawing.Size(155, 29);
             this.btnQuenMK.TabIndex = 15;
@@ -173,7 +173,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(223, 232);
+            this.btnLogin.Location = new System.Drawing.Point(161, 248);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 29);
             this.btnLogin.TabIndex = 9;
@@ -185,7 +185,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(682, 353);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDangNhap);
@@ -193,7 +193,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDangNhap";
             this.Text = "FormDangNhap";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();

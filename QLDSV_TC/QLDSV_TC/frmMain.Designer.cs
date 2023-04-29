@@ -211,7 +211,7 @@
             this.ribbonPageGroup1});
             this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Quản Trị";
+            this.ribbonPage1.Text = "Cấu hình";
             // 
             // ribbonPageGroup1
             // 

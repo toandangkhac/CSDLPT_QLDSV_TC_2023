@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,8 +13,9 @@ namespace QLDSV_TC
     public partial class frmLop : Form
     {
         // vi tri khi them
-        int viTri = 0;
-        string maKhoa = "";
+        private int viTri = 0;
+        private string maKhoa = "";
+        private string maLop = "";
         public frmLop()
         {
             InitializeComponent();
@@ -23,32 +23,33 @@ namespace QLDSV_TC
 
         private void frmLop_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dS.SINHVIEN' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'dS.DANGKY' table. You can move, or remove it, as needed.
 
-
-            // TODO: This line of code loads data into the 'dS1.SINHVIEN' table. You can move, or remove it, as needed.
-
-            // TODO: This line of code loads data into the 'dS1.LOP' table. You can move, or remove it, as needed.
-            // LOP, SINH VIEN THUOC KHOA VT
-
+            //  SET FONT FOR ALL CONTROLS
+            List<Control> allControls = GetAllControls(this);
+            allControls.ForEach(k => k.Font = new System.Drawing.Font("Times New Roman", 12));
             dS.EnforceConstraints = false;
             try
             {
+                //Program.connstr = "Data Source=DESKTOP-9QNDCS8\\DUCTRONG;Initial Catalog=QLDSV_TC;Integrated Security=True";
                 this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.lOPTableAdapter.Fill(this.dS.LOP);
+                // TODO: This line of code loads data into the 'dS.SINHVIEN' table. You can move, or remove it, as needed.
                 this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
+                // TODO: This line of code loads data into the 'dS.LOP' table. You can move, or remove it, as needed.
+                this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dANGKYTableAdapter.Fill(this.dS.DANGKY);
+                dgvSINHVIEN.ContextMenuStrip = contextMenuStrip2;
             }
+            
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi load form Lop!", "", MessageBoxButtons.OK);
                 return;
             }
-
-            // TODO: This line of code loads data into the 'dS.SINHVIEN' table. You can move, or remove it, as needed.
-
             maKhoa = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();
-
+            maLop = ((DataRowView)bdsLOP[bdsLOP.Position])["MALOP"].ToString();
             cmbKhoa.DataSource = Program.bds_dspm;
             cmbKhoa.DisplayMember = "TENKHOA";
             cmbKhoa.ValueMember = "TENSERVER";
@@ -60,24 +61,30 @@ namespace QLDSV_TC
             else
                 cmbKhoa.Enabled = false;
             btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled = true;
-            pnlThemLop.Enabled = false;
+            pnlLOP.Enabled = false;
+            pnlSINHVIEN.Enabled = false;
+
+            
         }
 
-        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            viTri = bdsLOP.Position;
-            pnlThemLop.Enabled = true;
-            bdsLOP.AddNew();
-            txtMAKHOA.Text = maKhoa;
 
-            btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = false;
-            btnGhi.Enabled = btnPhucHoi.Enabled = true;
-            gcLOP.Enabled = true;
+
+        private List<Control> GetAllControls(Control container, List<Control> list)
+        {
+            foreach (Control c in container.Controls)
+            {
+
+                if (c.Controls.Count > 0)
+                    list = GetAllControls(c, list);
+                else
+                    list.Add(c);
+            }
+
+            return list;
         }
-
-        private void sINHVIENBindingSource_CurrentChanged(object sender, EventArgs e)
+        private List<Control> GetAllControls(Control container)
         {
-
+            return GetAllControls(container, new List<Control>());
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,6 +128,28 @@ namespace QLDSV_TC
             }
         }
 
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            viTri = bdsLOP.Position;
+            pnlLOP.Enabled = true;
+            bdsLOP.AddNew();
+            txtMAKHOA.Text = maKhoa;
+
+            btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = true;
+            gcLOP.Enabled = true;
+            
+        }
+
+        private void btnHieuChinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            viTri = bdsLOP.Position;
+            pnlLOP.Enabled = true;
+            btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = false;
+            btnPhucHoi.Enabled = btnGhi.Enabled = true;
+            gcLOP.Enabled = false;
+        }
+
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (txtMALOP.Text.Trim() == "")
@@ -157,21 +186,7 @@ namespace QLDSV_TC
             gcLOP.Enabled = true;
             btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
-            pnlThemLop.Enabled = false;
-        }
-
-        private void txtMALOP_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHieuChinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            viTri = bdsLOP.Position;
-            pnlThemLop.Enabled = true;
-            btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = false;
-            btnPhucHoi.Enabled = btnGhi.Enabled = true;
-            gcLOP.Enabled = false;
+            pnlLOP.Enabled = false;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -207,6 +222,7 @@ namespace QLDSV_TC
                     return;
                 }
             }
+            
         }
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -215,9 +231,10 @@ namespace QLDSV_TC
             bdsLOP.CancelEdit();
             if (btnThem.Enabled == false) bdsLOP.Position = viTri;
             gcLOP.Enabled = true;
-            pnlThemLop.Enabled = false;
+            pnlLOP.Enabled = false;
             btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
             btnPhucHoi.Enabled = btnGhi.Enabled = false;
+            
         }
 
         private void btnReload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -237,8 +254,96 @@ namespace QLDSV_TC
         {
             this.Close();
         }
+
+        
+
+        private void tsTHEMSV_Click(object sender, EventArgs e)
+        {
+            viTri = bdsSINHVIEN.Position;
+            pnlSINHVIEN.Enabled = true;
+            bdsSINHVIEN.AddNew();
+            txtMALOPSV.Text = maLop;
+
+            btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled = false;
+            dgvSINHVIEN.Enabled = true;
+        }
+
+        private void tsHIEUCHINHSV_Click(object sender, EventArgs e)
+        {
+            viTri = bdsSINHVIEN.Position;
+            pnlSINHVIEN.Enabled = true;
+            btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled = false;
+            
+            dgvSINHVIEN.Enabled = false;
+        }
+
+        private void tsXOASV_Click(object sender, EventArgs e)
+        {
+            string masv = "";
+            // sinh vien da dang ki lop tin chi thi khong xoa
+            if (bdsDANGKI.Count > 0)
+            {
+                MessageBox.Show("Sinh viên đã đăng kí lớp tính chỉ, không thế xóa!", "", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (MessageBox.Show("Bạn có muốn xóa sinh viên này không?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                try
+                {
+                    masv = ((DataRowView)bdsSINHVIEN[bdsSINHVIEN.Position])["MASV"].ToString();
+                    // XOA TREN GIAO DIEN
+                    bdsSINHVIEN.RemoveCurrent();
+                    this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi xóa sinh viên!", "", MessageBoxButtons.OK);
+                    this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
+                    bdsSINHVIEN.Position = bdsSINHVIEN.Find("MASV", masv);
+                    return;
+                }
+            }
+        }
+
+        private void btnGHISV_Click(object sender, EventArgs e)
+        {
+            if (txtMASV.Text.Trim() == "")
+                MessageBox.Show("mã sinh viên không được để trống!", "", MessageBoxButtons.OK);
+            if (txtHO.Text.Trim() == "")
+                MessageBox.Show("họ sinh viên không được để trống!", "", MessageBoxButtons.OK);
+            if (txtTEN.Text.Trim() == "")
+                MessageBox.Show("tên sinh viên không được để trống!", "", MessageBoxButtons.OK);
+            // DIACHI, NGAYSINH, PASSWORD có thể null
+            // viet sp kiem tra MASV đã tồn tại trên các mảnh chưa
+
+            try
+            {
+                bdsSINHVIEN.EndEdit();
+                bdsSINHVIEN.ResetCurrentItem();
+                this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi ghi sinh viên!", "", MessageBoxButtons.OK);
+                btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled = true;
+                return;
+            }
+             
+            pnlSINHVIEN.Enabled = false;
+        }
+
+        private void btnPHUCHOISV_Click(object sender, EventArgs e)
+        {
+            // neu chưa ghi
+            // The EndEdit method has not been called yet.
+            bdsSINHVIEN.CancelEdit();
+            dgvSINHVIEN.Enabled = true;
+            btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
+            btnPhucHoi.Enabled = btnGhi.Enabled = false;
+            pnlSINHVIEN.Enabled = false;
+        }
     }
-
 }
-
-
