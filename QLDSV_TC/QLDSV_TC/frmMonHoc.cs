@@ -21,15 +21,16 @@ namespace QLDSV_TC
 
         private void frmMonHoc_Load(object sender, EventArgs e)
         {
+            
 
-            dS.EnforceConstraints = false;
+            dS1.EnforceConstraints = false;
             try
             {
-                this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.mONHOCTableAdapter.Fill(this.dS.MONHOC);
-                this.lOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
+                this.mONHOCTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.mONHOCTableAdapter1.Fill(this.dS1.MONHOC);
+                this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
                 // TODO: This line of code loads data into the 'dS.LOPTINCHI' table. You can move, or remove it, as needed.
-                this.lOPTINCHITableAdapter.Fill(this.dS.LOPTINCHI);
+                this.lOPTINCHITableAdapter1.Fill(this.dS1.LOPTINCHI);
                 // TODO: This line of code loads data into the 'dS.MONHOC' table. You can move, or remove it, as needed.
                 
             }
@@ -90,8 +91,8 @@ namespace QLDSV_TC
                 bdsMONHOC.EndEdit();
                 // dua thong tin len luoi (grid)
                 bdsMONHOC.ResetCurrentItem();
-                this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.mONHOCTableAdapter.Update(this.dS.MONHOC);
+                this.mONHOCTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.mONHOCTableAdapter1.Update(this.dS1.MONHOC);
 
             }
             catch (Exception ex)
@@ -132,16 +133,16 @@ namespace QLDSV_TC
                     mamh = ((DataRowView)bdsMONHOC[bdsMONHOC.Position])["MAMH"].ToString();
                     // xoa tren giao dien
                     bdsMONHOC.RemoveCurrent();
-                    this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.mONHOCTableAdapter1.Connection.ConnectionString = Program.connstr;
                     // cap nhat xoa tren database
-                    this.mONHOCTableAdapter.Update(this.dS.MONHOC);
+                    this.mONHOCTableAdapter1.Update(this.dS1.MONHOC);
                 }
                 catch (Exception ex)
                 {
                     // truong hop cap nhat tren db bi loi
                     MessageBox.Show("Lỗi xóa giảng viên. Bạn hãy thử xóa lại\n" + ex.Message, "", MessageBoxButtons.OK);
                     // do du lieu tu db vào lại giao diện nếu xóa k thành công
-                    this.mONHOCTableAdapter.Fill(this.dS.MONHOC);
+                    this.mONHOCTableAdapter1.Fill(this.dS1.MONHOC);
                     // hiển thị dòng được trỏ tới để xóa ở trên
                     bdsMONHOC.Position = bdsMONHOC.Find("MAMH", mamh);
                     return;
@@ -164,7 +165,7 @@ namespace QLDSV_TC
         {
             try
             {
-                this.mONHOCTableAdapter.Fill(this.dS.MONHOC);
+                this.mONHOCTableAdapter1.Fill(this.dS1.MONHOC);
             }
             catch (Exception ex)
             {

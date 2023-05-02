@@ -45,15 +45,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             this.gcLOP = new DevExpress.XtraGrid.GridControl();
             this.bdsLOP = new System.Windows.Forms.BindingSource(this.components);
-            this.dS = new QLDSV_TC.DS();
+            this.dS1 = new QLDSV_TC.DS1();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lOPTableAdapter = new QLDSV_TC.DSTableAdapters.LOPTableAdapter();
-            this.tableAdapterManager = new QLDSV_TC.DSTableAdapters.TableAdapterManager();
-            this.sINHVIENTableAdapter = new QLDSV_TC.DSTableAdapters.SINHVIENTableAdapter();
             this.dgvSINHVIEN = new System.Windows.Forms.DataGridView();
             this.mASVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +60,7 @@
             this.nGAYSINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mALOPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dANGHIHOCDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdsSINHVIEN = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLOP = new DevExpress.XtraEditors.PanelControl();
             this.txtMAKHOA = new DevExpress.XtraEditors.TextEdit();
@@ -81,8 +79,6 @@
             this.txtTEN = new DevExpress.XtraEditors.TextEdit();
             this.txtHO = new DevExpress.XtraEditors.TextEdit();
             this.txtMASV = new DevExpress.XtraEditors.TextEdit();
-            this.bdsDANGKI = new System.Windows.Forms.BindingSource(this.components);
-            this.dANGKYTableAdapter = new QLDSV_TC.DSTableAdapters.DANGKYTableAdapter();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -109,6 +105,11 @@
             this.tsTHEMSV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsHIEUCHINHSV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsXOASV = new System.Windows.Forms.ToolStripMenuItem();
+            this.lOPTableAdapter1 = new QLDSV_TC.DS1TableAdapters.LOPTableAdapter();
+            this.tableAdapterManager1 = new QLDSV_TC.DS1TableAdapters.TableAdapterManager();
+            this.dANGKYTableAdapter1 = new QLDSV_TC.DS1TableAdapters.DANGKYTableAdapter();
+            this.sINHVIENTableAdapter1 = new QLDSV_TC.DS1TableAdapters.SINHVIENTableAdapter();
+            this.bdsDANGKI = new System.Windows.Forms.BindingSource(this.components);
             mALOPLabel = new System.Windows.Forms.Label();
             tENLOPLabel = new System.Windows.Forms.Label();
             kHOAHOCLabel = new System.Windows.Forms.Label();
@@ -124,7 +125,7 @@
             pASSWORDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gcLOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSINHVIEN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSINHVIEN)).BeginInit();
@@ -146,9 +147,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTEN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMASV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKI)).BeginInit();
             this.SuspendLayout();
             // 
             // mALOPLabel
@@ -283,12 +284,12 @@
             // bdsLOP
             // 
             this.bdsLOP.DataMember = "LOP";
-            this.bdsLOP.DataSource = this.dS;
+            this.bdsLOP.DataSource = this.dS1;
             // 
-            // dS
+            // dS1
             // 
-            this.dS.DataSetName = "DS";
-            this.dS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dS1.DataSetName = "DS1";
+            this.dS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -337,26 +338,6 @@
             this.colMAKHOA.VisibleIndex = 3;
             this.colMAKHOA.Width = 33;
             // 
-            // lOPTableAdapter
-            // 
-            this.lOPTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DANGKYTableAdapter = null;
-            this.tableAdapterManager.GIANGVIENTableAdapter = null;
-            this.tableAdapterManager.KHOATableAdapter = null;
-            this.tableAdapterManager.LOPTableAdapter = this.lOPTableAdapter;
-            this.tableAdapterManager.LOPTINCHITableAdapter = null;
-            this.tableAdapterManager.MONHOCTableAdapter = null;
-            this.tableAdapterManager.SINHVIENTableAdapter = this.sINHVIENTableAdapter;
-            this.tableAdapterManager.UpdateOrder = QLDSV_TC.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // sINHVIENTableAdapter
-            // 
-            this.sINHVIENTableAdapter.ClearBeforeFill = true;
-            // 
             // dgvSINHVIEN
             // 
             this.dgvSINHVIEN.AutoGenerateColumns = false;
@@ -370,7 +351,8 @@
             this.dIACHIDataGridViewTextBoxColumn,
             this.nGAYSINHDataGridViewTextBoxColumn,
             this.mALOPDataGridViewTextBoxColumn,
-            this.dANGHIHOCDataGridViewCheckBoxColumn});
+            this.dANGHIHOCDataGridViewCheckBoxColumn,
+            this.pASSWORDDataGridViewTextBoxColumn});
             this.dgvSINHVIEN.DataSource = this.bdsSINHVIEN;
             this.dgvSINHVIEN.Location = new System.Drawing.Point(885, 167);
             this.dgvSINHVIEN.Name = "dgvSINHVIEN";
@@ -443,6 +425,14 @@
             this.dANGHIHOCDataGridViewCheckBoxColumn.Name = "dANGHIHOCDataGridViewCheckBoxColumn";
             this.dANGHIHOCDataGridViewCheckBoxColumn.Width = 125;
             // 
+            // pASSWORDDataGridViewTextBoxColumn
+            // 
+            this.pASSWORDDataGridViewTextBoxColumn.DataPropertyName = "PASSWORD";
+            this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
+            this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
+            this.pASSWORDDataGridViewTextBoxColumn.Width = 125;
+            // 
             // bdsSINHVIEN
             // 
             this.bdsSINHVIEN.DataMember = "FK_SINHVIEN_LOP";
@@ -460,7 +450,7 @@
             this.pnlLOP.Controls.Add(this.txtMALOP);
             this.pnlLOP.Location = new System.Drawing.Point(0, 419);
             this.pnlLOP.Name = "pnlLOP";
-            this.pnlLOP.Size = new System.Drawing.Size(889, 281);
+            this.pnlLOP.Size = new System.Drawing.Size(887, 281);
             this.pnlLOP.TabIndex = 14;
             // 
             // txtMAKHOA
@@ -629,15 +619,6 @@
             this.txtMASV.Size = new System.Drawing.Size(243, 22);
             this.txtMASV.TabIndex = 1;
             // 
-            // bdsDANGKI
-            // 
-            this.bdsDANGKI.DataMember = "FK_CTLTC_SINHVIEN";
-            this.bdsDANGKI.DataSource = this.bdsSINHVIEN;
-            // 
-            // dANGKYTableAdapter
-            // 
-            this.dANGKYTableAdapter.ClearBeforeFill = true;
-            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -805,7 +786,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 812);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 833);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(2105, 20);
             // 
@@ -815,7 +796,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 56);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 756);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 777);
             // 
             // barDockControlRight
             // 
@@ -823,7 +804,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(2105, 56);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 756);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 777);
             // 
             // btnDSGV
             // 
@@ -885,12 +866,41 @@
             this.tsXOASV.Text = "Xóa sinh viên";
             this.tsXOASV.Click += new System.EventHandler(this.tsXOASV_Click);
             // 
+            // lOPTableAdapter1
+            // 
+            this.lOPTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.DANGKYTableAdapter = this.dANGKYTableAdapter1;
+            this.tableAdapterManager1.GIANGVIENTableAdapter = null;
+            this.tableAdapterManager1.KHOATableAdapter = null;
+            this.tableAdapterManager1.LOPTableAdapter = this.lOPTableAdapter1;
+            this.tableAdapterManager1.LOPTINCHITableAdapter = null;
+            this.tableAdapterManager1.MONHOCTableAdapter = null;
+            this.tableAdapterManager1.SINHVIENTableAdapter = this.sINHVIENTableAdapter1;
+            this.tableAdapterManager1.UpdateOrder = QLDSV_TC.DS1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // dANGKYTableAdapter1
+            // 
+            this.dANGKYTableAdapter1.ClearBeforeFill = true;
+            // 
+            // sINHVIENTableAdapter1
+            // 
+            this.sINHVIENTableAdapter1.ClearBeforeFill = true;
+            // 
+            // bdsDANGKI
+            // 
+            this.bdsDANGKI.DataMember = "FK_CTLTC_SINHVIEN";
+            this.bdsDANGKI.DataSource = this.bdsSINHVIEN;
+            // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1924, 853);
+            this.ClientSize = new System.Drawing.Size(1924, 874);
             this.Controls.Add(this.cmbKhoa);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
@@ -909,7 +919,7 @@
             this.Load += new System.EventHandler(this.frmLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcLOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSINHVIEN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSINHVIEN)).EndInit();
@@ -933,9 +943,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTEN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMASV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKI)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -944,25 +954,11 @@
         #endregion
         private DevExpress.XtraGrid.GridControl gcLOP;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DS dS;
-        private System.Windows.Forms.BindingSource bdsLOP;
-        private DSTableAdapters.LOPTableAdapter lOPTableAdapter;
-        private DSTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView dgvSINHVIEN;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
         private DevExpress.XtraGrid.Columns.GridColumn colKHOAHOC;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKHOA;
-        private DSTableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
-        private System.Windows.Forms.BindingSource bdsSINHVIEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mASVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tENDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn pHAIDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dIACHIDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYSINHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mALOPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dANGHIHOCDataGridViewCheckBoxColumn;
         private DevExpress.XtraEditors.PanelControl pnlSINHVIEN;
         private DevExpress.XtraEditors.PanelControl pnlLOP;
         private DevExpress.XtraEditors.TextEdit txtPASS;
@@ -978,8 +974,6 @@
         private DevExpress.XtraEditors.TextEdit txtKHOAHOC;
         private DevExpress.XtraEditors.TextEdit txtTENLOP;
         private DevExpress.XtraEditors.TextEdit txtMALOP;
-        private System.Windows.Forms.BindingSource bdsDANGKI;
-        private DSTableAdapters.DANGKYTableAdapter dANGKYTableAdapter;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraBars.BarManager barManager1;
@@ -1008,5 +1002,22 @@
         private System.Windows.Forms.ToolStripMenuItem tsXOASV;
         private DevExpress.XtraEditors.SimpleButton btnPHUCHOISV;
         private DevExpress.XtraEditors.SimpleButton btnGHISV;
+        private DS1 dS1;
+        private System.Windows.Forms.BindingSource bdsLOP;
+        private DS1TableAdapters.LOPTableAdapter lOPTableAdapter1;
+        private DS1TableAdapters.TableAdapterManager tableAdapterManager1;
+        private DS1TableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter1;
+        private System.Windows.Forms.BindingSource bdsSINHVIEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn pHAIDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dIACHIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYSINHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mALOPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dANGHIHOCDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pASSWORDDataGridViewTextBoxColumn;
+        private DS1TableAdapters.DANGKYTableAdapter dANGKYTableAdapter1;
+        private System.Windows.Forms.BindingSource bdsDANGKI;
     }
 }

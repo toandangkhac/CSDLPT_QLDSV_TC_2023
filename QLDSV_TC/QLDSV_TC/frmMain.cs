@@ -109,6 +109,36 @@ namespace QLDSV_TC
             Program.frmChinh.Close();
            
         }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmLopTinChi));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmLopTinChi f = new frmLopTinChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(XfrmDSLopTCtheoNienKhoaHocKy));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                XfrmDSLopTCtheoNienKhoaHocKy f = new XfrmDSLopTCtheoNienKhoaHocKy();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 
 }

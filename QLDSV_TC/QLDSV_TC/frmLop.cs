@@ -23,23 +23,23 @@ namespace QLDSV_TC
 
         private void frmLop_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dS.DANGKY' table. You can move, or remove it, as needed.
+            
 
             //  SET FONT FOR ALL CONTROLS
             List<Control> allControls = GetAllControls(this);
             allControls.ForEach(k => k.Font = new System.Drawing.Font("Times New Roman", 12));
-            dS.EnforceConstraints = false;
+            dS1.EnforceConstraints = false;
             try
             {
                 //Program.connstr = "Data Source=DESKTOP-9QNDCS8\\DUCTRONG;Initial Catalog=QLDSV_TC;Integrated Security=True";
-                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.lOPTableAdapter.Fill(this.dS.LOP);
+                this.lOPTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.lOPTableAdapter1.Fill(this.dS1.LOP);
                 // TODO: This line of code loads data into the 'dS.SINHVIEN' table. You can move, or remove it, as needed.
-                this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
+                this.sINHVIENTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.sINHVIENTableAdapter1.Fill(this.dS1.SINHVIEN);
                 // TODO: This line of code loads data into the 'dS.LOP' table. You can move, or remove it, as needed.
-                this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.dANGKYTableAdapter.Fill(this.dS.DANGKY);
+                this.dANGKYTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.dANGKYTableAdapter1.Fill(this.dS1.DANGKY);
                 dgvSINHVIEN.ContextMenuStrip = contextMenuStrip2;
             }
             
@@ -116,10 +116,10 @@ namespace QLDSV_TC
             }
             try
             {
-                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.lOPTableAdapter.Fill(this.dS.LOP);
-                this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
+                this.lOPTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.lOPTableAdapter1.Fill(this.dS1.LOP);
+                this.sINHVIENTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.sINHVIENTableAdapter1.Fill(this.dS1.SINHVIEN);
                 maKhoa = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();
             }
             catch (Exception ex)
@@ -174,8 +174,8 @@ namespace QLDSV_TC
                 bdsLOP.EndEdit();
                 // dua thong tin len luoi (grid)
                 bdsLOP.ResetCurrentItem();
-                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.lOPTableAdapter.Update(this.dS.LOP);
+                this.lOPTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.lOPTableAdapter1.Update(this.dS1.LOP);
 
             }
             catch (Exception ex)
@@ -207,16 +207,16 @@ namespace QLDSV_TC
                     malop = ((DataRowView)bdsLOP[bdsLOP.Position])["MALOP"].ToString();
                     // xoa tren giao dien
                     bdsLOP.RemoveCurrent();
-                    this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.lOPTableAdapter1.Connection.ConnectionString = Program.connstr;
                     // cap nhat xoa tren database
-                    this.lOPTableAdapter.Update(this.dS.LOP);
+                    this.lOPTableAdapter1.Update(this.dS1.LOP);
                 }
                 catch (Exception ex)
                 {
                     // truong hop cap nhat tren db bi loi
                     MessageBox.Show("Lỗi xóa giảng viên. Bạn hãy thử xóa lại\n" + ex.Message, "", MessageBoxButtons.OK);
                     // do du lieu tu db vào lại giao diện nếu xóa k thành công
-                    this.lOPTableAdapter.Fill(this.dS.LOP);
+                    this.lOPTableAdapter1.Fill(this.dS1.LOP);
                     // hiển thị dòng được trỏ tới để xóa ở trên
                     bdsLOP.Position = bdsLOP.Find("MALOP", malop);
                     return;
@@ -241,7 +241,7 @@ namespace QLDSV_TC
         {
             try
             {
-                this.lOPTableAdapter.Fill(this.dS.LOP);
+                this.lOPTableAdapter1.Fill(this.dS1.LOP);
             }
             catch (Exception ex)
             {
@@ -294,13 +294,13 @@ namespace QLDSV_TC
                     masv = ((DataRowView)bdsSINHVIEN[bdsSINHVIEN.Position])["MASV"].ToString();
                     // XOA TREN GIAO DIEN
                     bdsSINHVIEN.RemoveCurrent();
-                    this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
+                    this.sINHVIENTableAdapter1.Connection.ConnectionString = Program.connstr;
+                    this.sINHVIENTableAdapter1.Update(this.dS1.SINHVIEN);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi xóa sinh viên!", "", MessageBoxButtons.OK);
-                    this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
+                    this.sINHVIENTableAdapter1.Fill(this.dS1.SINHVIEN);
                     bdsSINHVIEN.Position = bdsSINHVIEN.Find("MASV", masv);
                     return;
                 }
@@ -322,8 +322,8 @@ namespace QLDSV_TC
             {
                 bdsSINHVIEN.EndEdit();
                 bdsSINHVIEN.ResetCurrentItem();
-                this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
+                this.sINHVIENTableAdapter1.Connection.ConnectionString = Program.connstr;
+                this.sINHVIENTableAdapter1.Update(this.dS1.SINHVIEN);
             }
             catch (Exception ex)
             {
