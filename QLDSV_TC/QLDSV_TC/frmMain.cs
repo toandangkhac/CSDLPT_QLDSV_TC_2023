@@ -30,14 +30,26 @@ namespace QLDSV_TC
             if (Program.mGroup == "PGV" || Program.mGroup == "KHOA")
             {
                 btnTaoTK.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
-                ribNhaTruong.Visible = true;
+                ribPGVKHOA.Visible = true;
                 ribSinhVien.Visible = false;
+                ribKeToan.Visible = false;
+                ribBaoCao.Visible = true;
             }
-            else if (Program.mGroup == "SV" || Program.mGroup == "PKT")
+            else if (Program.mGroup == "PKT")
             {
                 btnTaoTK.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                ribNhaTruong.Visible = false;
+                ribPGVKHOA.Visible = false;
+                ribSinhVien.Visible = false;
+                ribKeToan.Visible = true;
+                ribBaoCao.Visible = false;
+            }
+            else if (Program.mGroup == "SV")
+            {
+                btnTaoTK.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                ribPGVKHOA.Visible = false;
                 ribSinhVien.Visible = true;
+                ribKeToan.Visible = false;
+                ribBaoCao.Visible = false;
             }
         }
 

@@ -106,7 +106,7 @@ namespace QLDSV_TC
             // ket noi toi sv phan manh// lay duoc Program.connstr
             if (Program.KetNoi() == 0) return;
 
-            // lay 3 thong tin nay dua vao thanh trang thai trong frmMain
+            // lay 3 thong tin nay dua vao bien toan cuc trong program 
             Program.mKhoa = cmbKhoa.SelectedIndex;
             Program.mloginDN = Program.mlogin;
             Program.passwordDN = Program.password;

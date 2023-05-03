@@ -45,6 +45,7 @@
             this.cmbKhoa.Size = new System.Drawing.Size(121, 24);
             this.cmbKhoa.TabIndex = 0;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
+            this.cmbKhoa.SelectionChangeCommitted += new System.EventHandler(this.cmbKhoa_SelectionChangeCommitted);
             // 
             // cmbNienKhoa
             // 

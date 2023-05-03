@@ -61,7 +61,7 @@ namespace QLDSV_TC
             }
             catch
             {
-                MessageBox.Show("Lỗi kết nối về csdl gốc.\nBạn xem lại tên server publisher, tên CSDL!!");
+                MessageBox.Show("Lỗi kết nối tới cơ sở dữ liệu.\nBạn xem lại tên server, tên CSDL!!");
                 return 0;
             }
         }
@@ -114,6 +114,13 @@ namespace QLDSV_TC
                 Program.conn.Close();
                 return ex.State; // chuoi bao loi raiserror từ sql 
             }
+        }
+        public static void SetEnableOfButton(Form frm, Boolean Active)
+        {
+
+            foreach (Control ctl in frm.Controls)
+                if ((ctl) is Button)
+                    ctl.Enabled = Active;
         }
 
 

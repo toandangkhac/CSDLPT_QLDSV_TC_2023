@@ -63,6 +63,7 @@
             this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdsSINHVIEN = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLOP = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtMAKHOA = new DevExpress.XtraEditors.TextEdit();
             this.txtKHOAHOC = new DevExpress.XtraEditors.TextEdit();
             this.txtTENLOP = new DevExpress.XtraEditors.TextEdit();
@@ -157,108 +158,108 @@
             mALOPLabel.AutoSize = true;
             mALOPLabel.Location = new System.Drawing.Point(23, 31);
             mALOPLabel.Name = "mALOPLabel";
-            mALOPLabel.Size = new System.Drawing.Size(52, 16);
+            mALOPLabel.Size = new System.Drawing.Size(72, 16);
             mALOPLabel.TabIndex = 0;
-            mALOPLabel.Text = "MALOP:";
+            mALOPLabel.Text = "Mã lớp (*):";
             // 
             // tENLOPLabel
             // 
             tENLOPLabel.AutoSize = true;
             tENLOPLabel.Location = new System.Drawing.Point(18, 83);
             tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(57, 16);
+            tENLOPLabel.Size = new System.Drawing.Size(77, 16);
             tENLOPLabel.TabIndex = 2;
-            tENLOPLabel.Text = "TENLOP:";
+            tENLOPLabel.Text = "Tên lớp (*):";
             // 
             // kHOAHOCLabel
             // 
             kHOAHOCLabel.AutoSize = true;
             kHOAHOCLabel.Location = new System.Drawing.Point(544, 83);
             kHOAHOCLabel.Name = "kHOAHOCLabel";
-            kHOAHOCLabel.Size = new System.Drawing.Size(69, 16);
+            kHOAHOCLabel.Size = new System.Drawing.Size(86, 16);
             kHOAHOCLabel.TabIndex = 4;
-            kHOAHOCLabel.Text = "KHOAHOC:";
+            kHOAHOCLabel.Text = "Khóa học (*):";
             // 
             // mAKHOALabel
             // 
             mAKHOALabel.AutoSize = true;
             mAKHOALabel.Location = new System.Drawing.Point(551, 31);
             mAKHOALabel.Name = "mAKHOALabel";
-            mAKHOALabel.Size = new System.Drawing.Size(62, 16);
+            mAKHOALabel.Size = new System.Drawing.Size(82, 16);
             mAKHOALabel.TabIndex = 6;
-            mAKHOALabel.Text = "MAKHOA:";
+            mAKHOALabel.Text = "Mã khoa (*):";
             // 
             // mASVLabel
             // 
             mASVLabel.AutoSize = true;
             mASVLabel.Location = new System.Drawing.Point(32, 28);
             mASVLabel.Name = "mASVLabel";
-            mASVLabel.Size = new System.Drawing.Size(46, 16);
+            mASVLabel.Size = new System.Drawing.Size(105, 16);
             mASVLabel.TabIndex = 0;
-            mASVLabel.Text = "MASV:";
+            mASVLabel.Text = "Mã sinh viên (*):";
             // 
             // hOLabel
             // 
             hOLabel.AutoSize = true;
             hOLabel.Location = new System.Drawing.Point(49, 80);
             hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(29, 16);
+            hOLabel.Size = new System.Drawing.Size(49, 16);
             hOLabel.TabIndex = 2;
-            hOLabel.Text = "HO:";
+            hOLabel.Text = "Họ (*):";
             // 
             // tENLabel
             // 
             tENLabel.AutoSize = true;
             tENLabel.Location = new System.Drawing.Point(488, 79);
             tENLabel.Name = "tENLabel";
-            tENLabel.Size = new System.Drawing.Size(35, 16);
+            tENLabel.Size = new System.Drawing.Size(56, 16);
             tENLabel.TabIndex = 4;
-            tENLabel.Text = "TEN:";
+            tENLabel.Text = "Tên (*):";
             // 
             // pHAILabel
             // 
             pHAILabel.AutoSize = true;
             pHAILabel.Location = new System.Drawing.Point(482, 126);
             pHAILabel.Name = "pHAILabel";
-            pHAILabel.Size = new System.Drawing.Size(39, 16);
+            pHAILabel.Size = new System.Drawing.Size(58, 16);
             pHAILabel.TabIndex = 6;
-            pHAILabel.Text = "PHAI:";
+            pHAILabel.Text = "Phái (*):";
             // 
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
             dIACHILabel.Location = new System.Drawing.Point(26, 175);
             dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(52, 16);
+            dIACHILabel.Size = new System.Drawing.Size(51, 16);
             dIACHILabel.TabIndex = 8;
-            dIACHILabel.Text = "DIACHI:";
+            dIACHILabel.Text = "Địa chỉ:";
             // 
             // nGAYSINHLabel
             // 
             nGAYSINHLabel.AutoSize = true;
             nGAYSINHLabel.Location = new System.Drawing.Point(7, 128);
             nGAYSINHLabel.Name = "nGAYSINHLabel";
-            nGAYSINHLabel.Size = new System.Drawing.Size(71, 16);
+            nGAYSINHLabel.Size = new System.Drawing.Size(67, 16);
             nGAYSINHLabel.TabIndex = 10;
-            nGAYSINHLabel.Text = "NGAYSINH:";
+            nGAYSINHLabel.Text = "Ngày sinh:";
             // 
             // mALOPLabel1
             // 
             mALOPLabel1.AutoSize = true;
             mALOPLabel1.Location = new System.Drawing.Point(471, 28);
             mALOPLabel1.Name = "mALOPLabel1";
-            mALOPLabel1.Size = new System.Drawing.Size(52, 16);
+            mALOPLabel1.Size = new System.Drawing.Size(72, 16);
             mALOPLabel1.TabIndex = 12;
-            mALOPLabel1.Text = "MALOP:";
+            mALOPLabel1.Text = "Mã lớp (*):";
             // 
             // dANGHIHOCLabel
             // 
             dANGHIHOCLabel.AutoSize = true;
             dANGHIHOCLabel.Location = new System.Drawing.Point(8, 249);
             dANGHIHOCLabel.Name = "dANGHIHOCLabel";
-            dANGHIHOCLabel.Size = new System.Drawing.Size(81, 16);
+            dANGHIHOCLabel.Size = new System.Drawing.Size(116, 16);
             dANGHIHOCLabel.TabIndex = 14;
-            dANGHIHOCLabel.Text = "DANGHIHOC:";
+            dANGHIHOCLabel.Text = "Đang nghỉ học (*):";
             // 
             // pASSWORDLabel
             // 
@@ -300,12 +301,15 @@
             this.colMAKHOA});
             this.gridView1.GridControl = this.gcLOP;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.OptionsView.RowAutoHeight = true;
             // 
             // colMALOP
             // 
             this.colMALOP.FieldName = "MALOP";
             this.colMALOP.MinWidth = 25;
             this.colMALOP.Name = "colMALOP";
+            this.colMALOP.OptionsColumn.ReadOnly = true;
             this.colMALOP.Visible = true;
             this.colMALOP.VisibleIndex = 0;
             this.colMALOP.Width = 53;
@@ -315,6 +319,7 @@
             this.colTENLOP.FieldName = "TENLOP";
             this.colTENLOP.MinWidth = 25;
             this.colTENLOP.Name = "colTENLOP";
+            this.colTENLOP.OptionsColumn.ReadOnly = true;
             this.colTENLOP.Visible = true;
             this.colTENLOP.VisibleIndex = 1;
             this.colTENLOP.Width = 150;
@@ -324,6 +329,7 @@
             this.colKHOAHOC.FieldName = "KHOAHOC";
             this.colKHOAHOC.MinWidth = 25;
             this.colKHOAHOC.Name = "colKHOAHOC";
+            this.colKHOAHOC.OptionsColumn.ReadOnly = true;
             this.colKHOAHOC.Visible = true;
             this.colKHOAHOC.VisibleIndex = 2;
             this.colKHOAHOC.Width = 34;
@@ -334,6 +340,7 @@
             this.colMAKHOA.MinWidth = 25;
             this.colMAKHOA.Name = "colMAKHOA";
             this.colMAKHOA.OptionsColumn.AllowEdit = false;
+            this.colMAKHOA.OptionsColumn.ReadOnly = true;
             this.colMAKHOA.Visible = true;
             this.colMAKHOA.VisibleIndex = 3;
             this.colMAKHOA.Width = 33;
@@ -367,6 +374,7 @@
             this.mASVDataGridViewTextBoxColumn.HeaderText = "MASV";
             this.mASVDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.mASVDataGridViewTextBoxColumn.Name = "mASVDataGridViewTextBoxColumn";
+            this.mASVDataGridViewTextBoxColumn.ReadOnly = true;
             this.mASVDataGridViewTextBoxColumn.Width = 125;
             // 
             // hODataGridViewTextBoxColumn
@@ -375,6 +383,7 @@
             this.hODataGridViewTextBoxColumn.HeaderText = "HO";
             this.hODataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hODataGridViewTextBoxColumn.Name = "hODataGridViewTextBoxColumn";
+            this.hODataGridViewTextBoxColumn.ReadOnly = true;
             this.hODataGridViewTextBoxColumn.Width = 125;
             // 
             // tENDataGridViewTextBoxColumn
@@ -383,6 +392,7 @@
             this.tENDataGridViewTextBoxColumn.HeaderText = "TEN";
             this.tENDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tENDataGridViewTextBoxColumn.Name = "tENDataGridViewTextBoxColumn";
+            this.tENDataGridViewTextBoxColumn.ReadOnly = true;
             this.tENDataGridViewTextBoxColumn.Width = 125;
             // 
             // pHAIDataGridViewCheckBoxColumn
@@ -391,6 +401,7 @@
             this.pHAIDataGridViewCheckBoxColumn.HeaderText = "PHAI";
             this.pHAIDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.pHAIDataGridViewCheckBoxColumn.Name = "pHAIDataGridViewCheckBoxColumn";
+            this.pHAIDataGridViewCheckBoxColumn.ReadOnly = true;
             this.pHAIDataGridViewCheckBoxColumn.Width = 125;
             // 
             // dIACHIDataGridViewTextBoxColumn
@@ -399,6 +410,7 @@
             this.dIACHIDataGridViewTextBoxColumn.HeaderText = "DIACHI";
             this.dIACHIDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dIACHIDataGridViewTextBoxColumn.Name = "dIACHIDataGridViewTextBoxColumn";
+            this.dIACHIDataGridViewTextBoxColumn.ReadOnly = true;
             this.dIACHIDataGridViewTextBoxColumn.Width = 125;
             // 
             // nGAYSINHDataGridViewTextBoxColumn
@@ -407,6 +419,7 @@
             this.nGAYSINHDataGridViewTextBoxColumn.HeaderText = "NGAYSINH";
             this.nGAYSINHDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nGAYSINHDataGridViewTextBoxColumn.Name = "nGAYSINHDataGridViewTextBoxColumn";
+            this.nGAYSINHDataGridViewTextBoxColumn.ReadOnly = true;
             this.nGAYSINHDataGridViewTextBoxColumn.Width = 125;
             // 
             // mALOPDataGridViewTextBoxColumn
@@ -415,6 +428,7 @@
             this.mALOPDataGridViewTextBoxColumn.HeaderText = "MALOP";
             this.mALOPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.mALOPDataGridViewTextBoxColumn.Name = "mALOPDataGridViewTextBoxColumn";
+            this.mALOPDataGridViewTextBoxColumn.ReadOnly = true;
             this.mALOPDataGridViewTextBoxColumn.Width = 125;
             // 
             // dANGHIHOCDataGridViewCheckBoxColumn
@@ -423,6 +437,7 @@
             this.dANGHIHOCDataGridViewCheckBoxColumn.HeaderText = "DANGHIHOC";
             this.dANGHIHOCDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.dANGHIHOCDataGridViewCheckBoxColumn.Name = "dANGHIHOCDataGridViewCheckBoxColumn";
+            this.dANGHIHOCDataGridViewCheckBoxColumn.ReadOnly = true;
             this.dANGHIHOCDataGridViewCheckBoxColumn.Width = 125;
             // 
             // pASSWORDDataGridViewTextBoxColumn
@@ -431,6 +446,7 @@
             this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
             this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
+            this.pASSWORDDataGridViewTextBoxColumn.ReadOnly = true;
             this.pASSWORDDataGridViewTextBoxColumn.Width = 125;
             // 
             // bdsSINHVIEN
@@ -440,6 +456,7 @@
             // 
             // pnlLOP
             // 
+            this.pnlLOP.Controls.Add(this.labelControl4);
             this.pnlLOP.Controls.Add(mAKHOALabel);
             this.pnlLOP.Controls.Add(this.txtMAKHOA);
             this.pnlLOP.Controls.Add(kHOAHOCLabel);
@@ -453,6 +470,18 @@
             this.pnlLOP.Size = new System.Drawing.Size(887, 281);
             this.pnlLOP.TabIndex = 14;
             // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Appearance.Options.UseForeColor = true;
+            this.labelControl4.Location = new System.Drawing.Point(100, 175);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(609, 28);
+            this.labelControl4.TabIndex = 8;
+            this.labelControl4.Text = "CHÚ Ý: Các mục có (*) là quan trọng, không để trống ô này";
+            // 
             // txtMAKHOA
             // 
             this.txtMAKHOA.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOP, "MAKHOA", true));
@@ -460,6 +489,7 @@
             this.txtMAKHOA.Name = "txtMAKHOA";
             this.txtMAKHOA.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMAKHOA.Properties.Appearance.Options.UseFont = true;
+            this.txtMAKHOA.Properties.ReadOnly = true;
             this.txtMAKHOA.Size = new System.Drawing.Size(123, 22);
             this.txtMAKHOA.TabIndex = 7;
             // 
@@ -553,7 +583,7 @@
             this.chkNGHIHOC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "DANGHIHOC", true));
             this.chkNGHIHOC.Location = new System.Drawing.Point(213, 246);
             this.chkNGHIHOC.Name = "chkNGHIHOC";
-            this.chkNGHIHOC.Properties.Caption = "checkEdit1";
+            this.chkNGHIHOC.Properties.Caption = "";
             this.chkNGHIHOC.Size = new System.Drawing.Size(94, 24);
             this.chkNGHIHOC.TabIndex = 15;
             // 
@@ -562,6 +592,7 @@
             this.txtMALOPSV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "MALOP", true));
             this.txtMALOPSV.Location = new System.Drawing.Point(605, 25);
             this.txtMALOPSV.Name = "txtMALOPSV";
+            this.txtMALOPSV.Properties.ReadOnly = true;
             this.txtMALOPSV.Size = new System.Drawing.Size(233, 22);
             this.txtMALOPSV.TabIndex = 13;
             // 
@@ -569,7 +600,7 @@
             // 
             this.dateNGAYSINH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "NGAYSINH", true));
             this.dateNGAYSINH.EditValue = null;
-            this.dateNGAYSINH.Location = new System.Drawing.Point(178, 125);
+            this.dateNGAYSINH.Location = new System.Drawing.Point(194, 128);
             this.dateNGAYSINH.Name = "dateNGAYSINH";
             this.dateNGAYSINH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -581,7 +612,7 @@
             // txtDIACHI
             // 
             this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "DIACHI", true));
-            this.txtDIACHI.Location = new System.Drawing.Point(178, 172);
+            this.txtDIACHI.Location = new System.Drawing.Point(194, 175);
             this.txtDIACHI.Name = "txtDIACHI";
             this.txtDIACHI.Size = new System.Drawing.Size(243, 22);
             this.txtDIACHI.TabIndex = 9;
@@ -591,8 +622,8 @@
             this.chkPHAI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "PHAI", true));
             this.chkPHAI.Location = new System.Drawing.Point(605, 123);
             this.chkPHAI.Name = "chkPHAI";
-            this.chkPHAI.Properties.Caption = "checkEdit1";
-            this.chkPHAI.Size = new System.Drawing.Size(94, 24);
+            this.chkPHAI.Properties.Caption = "Chọn: Nữ, Không chọn: Nam";
+            this.chkPHAI.Size = new System.Drawing.Size(208, 24);
             this.chkPHAI.TabIndex = 7;
             // 
             // txtTEN
@@ -606,7 +637,7 @@
             // txtHO
             // 
             this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "HO", true));
-            this.txtHO.Location = new System.Drawing.Point(178, 77);
+            this.txtHO.Location = new System.Drawing.Point(194, 80);
             this.txtHO.Name = "txtHO";
             this.txtHO.Size = new System.Drawing.Size(243, 22);
             this.txtHO.TabIndex = 3;
@@ -614,7 +645,7 @@
             // txtMASV
             // 
             this.txtMASV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "MASV", true));
-            this.txtMASV.Location = new System.Drawing.Point(178, 25);
+            this.txtMASV.Location = new System.Drawing.Point(194, 28);
             this.txtMASV.Name = "txtMASV";
             this.txtMASV.Size = new System.Drawing.Size(243, 22);
             this.txtMASV.TabIndex = 1;
@@ -757,7 +788,8 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "CÁC NÚT LỆNH THAO TÁC VỚI BẢNG LỚP";
+            this.barButtonItem1.Caption = "DƯỚI ĐÂY LÀ CÁC NÚT LỆNH THAO TÁC VỚI BẢNG LỚP, ĐỂ THAO TÁC VỚI BẢNG SINH VIÊN CL" +
+    "ICK CHUỘT PHẢI LÊN BẢNG SINH VIÊN";
             this.barButtonItem1.Enabled = false;
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
@@ -834,6 +866,7 @@
             this.cmbKhoa.Size = new System.Drawing.Size(251, 24);
             this.cmbKhoa.TabIndex = 33;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
+            this.cmbKhoa.SelectionChangeCommitted += new System.EventHandler(this.cmbKhoa_SelectionChangeCommitted);
             // 
             // contextMenuStrip2
             // 
@@ -1008,6 +1041,8 @@
         private DS1TableAdapters.TableAdapterManager tableAdapterManager1;
         private DS1TableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter1;
         private System.Windows.Forms.BindingSource bdsSINHVIEN;
+        private DS1TableAdapters.DANGKYTableAdapter dANGKYTableAdapter1;
+        private System.Windows.Forms.BindingSource bdsDANGKI;
         private System.Windows.Forms.DataGridViewTextBoxColumn mASVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENDataGridViewTextBoxColumn;
@@ -1017,7 +1052,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mALOPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dANGHIHOCDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pASSWORDDataGridViewTextBoxColumn;
-        private DS1TableAdapters.DANGKYTableAdapter dANGKYTableAdapter1;
-        private System.Windows.Forms.BindingSource bdsDANGKI;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
     }
 }

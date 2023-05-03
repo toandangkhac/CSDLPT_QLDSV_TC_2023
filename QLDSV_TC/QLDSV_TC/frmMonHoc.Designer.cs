@@ -53,6 +53,8 @@
             this.btnDSGV = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.gcMONHOC = new DevExpress.XtraGrid.GridControl();
+            this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
+            this.dS1 = new QLDSV_TC.DS1();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENMH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,18 +66,18 @@
             this.spinSOTIETLT = new DevExpress.XtraEditors.SpinEdit();
             this.txtTENMH = new DevExpress.XtraEditors.TextEdit();
             this.txtMAMH = new DevExpress.XtraEditors.TextEdit();
-            this.dS1 = new QLDSV_TC.DS1();
-            this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
             this.mONHOCTableAdapter1 = new QLDSV_TC.DS1TableAdapters.MONHOCTableAdapter();
             this.tableAdapterManager1 = new QLDSV_TC.DS1TableAdapters.TableAdapterManager();
-            this.bdsLOPTC = new System.Windows.Forms.BindingSource(this.components);
             this.lOPTINCHITableAdapter1 = new QLDSV_TC.DS1TableAdapters.LOPTINCHITableAdapter();
+            this.bdsLOPTC = new System.Windows.Forms.BindingSource(this.components);
             mAMHLabel = new System.Windows.Forms.Label();
             tENMHLabel = new System.Windows.Forms.Label();
             sOTIET_LTLabel = new System.Windows.Forms.Label();
             sOTIET_THLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMONHOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -85,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.spinSOTIETLT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTENMH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMAMH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -317,6 +317,16 @@
             this.gcMONHOC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // bdsMONHOC
+            // 
+            this.bdsMONHOC.DataMember = "MONHOC";
+            this.bdsMONHOC.DataSource = this.dS1;
+            // 
+            // dS1
+            // 
+            this.dS1.DataSetName = "DS1";
+            this.dS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -326,12 +336,15 @@
             this.colSOTIET_TH});
             this.gridView1.GridControl = this.gcMONHOC;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.OptionsView.RowAutoHeight = true;
             // 
             // colMAMH
             // 
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 25;
             this.colMAMH.Name = "colMAMH";
+            this.colMAMH.OptionsColumn.ReadOnly = true;
             this.colMAMH.Visible = true;
             this.colMAMH.VisibleIndex = 0;
             this.colMAMH.Width = 94;
@@ -341,6 +354,7 @@
             this.colTENMH.FieldName = "TENMH";
             this.colTENMH.MinWidth = 25;
             this.colTENMH.Name = "colTENMH";
+            this.colTENMH.OptionsColumn.ReadOnly = true;
             this.colTENMH.Visible = true;
             this.colTENMH.VisibleIndex = 1;
             this.colTENMH.Width = 94;
@@ -350,6 +364,7 @@
             this.colSOTIET_LT.FieldName = "SOTIET_LT";
             this.colSOTIET_LT.MinWidth = 25;
             this.colSOTIET_LT.Name = "colSOTIET_LT";
+            this.colSOTIET_LT.OptionsColumn.ReadOnly = true;
             this.colSOTIET_LT.Visible = true;
             this.colSOTIET_LT.VisibleIndex = 2;
             this.colSOTIET_LT.Width = 94;
@@ -359,6 +374,7 @@
             this.colSOTIET_TH.FieldName = "SOTIET_TH";
             this.colSOTIET_TH.MinWidth = 25;
             this.colSOTIET_TH.Name = "colSOTIET_TH";
+            this.colSOTIET_TH.OptionsColumn.ReadOnly = true;
             this.colSOTIET_TH.Visible = true;
             this.colSOTIET_TH.VisibleIndex = 3;
             this.colSOTIET_TH.Width = 94;
@@ -375,13 +391,13 @@
             // pnlThemMH
             // 
             this.pnlThemMH.Controls.Add(sOTIET_THLabel);
-            this.pnlThemMH.Controls.Add(this.spinSOTIETTH);
             this.pnlThemMH.Controls.Add(sOTIET_LTLabel);
-            this.pnlThemMH.Controls.Add(this.spinSOTIETLT);
             this.pnlThemMH.Controls.Add(tENMHLabel);
             this.pnlThemMH.Controls.Add(this.txtTENMH);
             this.pnlThemMH.Controls.Add(mAMHLabel);
             this.pnlThemMH.Controls.Add(this.txtMAMH);
+            this.pnlThemMH.Controls.Add(this.spinSOTIETTH);
+            this.pnlThemMH.Controls.Add(this.spinSOTIETLT);
             this.pnlThemMH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlThemMH.Location = new System.Drawing.Point(2, 2);
             this.pnlThemMH.Name = "pnlThemMH";
@@ -396,12 +412,12 @@
             0,
             0,
             0});
-            this.spinSOTIETTH.Location = new System.Drawing.Point(517, 63);
+            this.spinSOTIETTH.Location = new System.Drawing.Point(535, 63);
             this.spinSOTIETTH.MenuManager = this.barManager1;
             this.spinSOTIETTH.Name = "spinSOTIETTH";
             this.spinSOTIETTH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinSOTIETTH.Size = new System.Drawing.Size(229, 24);
+            this.spinSOTIETTH.Size = new System.Drawing.Size(193, 24);
             this.spinSOTIETTH.TabIndex = 7;
             // 
             // spinSOTIETLT
@@ -412,18 +428,18 @@
             0,
             0,
             0});
-            this.spinSOTIETLT.Location = new System.Drawing.Point(517, 20);
+            this.spinSOTIETLT.Location = new System.Drawing.Point(535, 20);
             this.spinSOTIETLT.MenuManager = this.barManager1;
             this.spinSOTIETLT.Name = "spinSOTIETLT";
             this.spinSOTIETLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinSOTIETLT.Size = new System.Drawing.Size(229, 24);
+            this.spinSOTIETLT.Size = new System.Drawing.Size(193, 24);
             this.spinSOTIETLT.TabIndex = 5;
             // 
             // txtTENMH
             // 
             this.txtTENMH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "TENMH", true));
-            this.txtTENMH.Location = new System.Drawing.Point(97, 65);
+            this.txtTENMH.Location = new System.Drawing.Point(114, 65);
             this.txtTENMH.MenuManager = this.barManager1;
             this.txtTENMH.Name = "txtTENMH";
             this.txtTENMH.Size = new System.Drawing.Size(232, 22);
@@ -432,21 +448,11 @@
             // txtMAMH
             // 
             this.txtMAMH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "MAMH", true));
-            this.txtMAMH.Location = new System.Drawing.Point(97, 21);
+            this.txtMAMH.Location = new System.Drawing.Point(114, 21);
             this.txtMAMH.MenuManager = this.barManager1;
             this.txtMAMH.Name = "txtMAMH";
             this.txtMAMH.Size = new System.Drawing.Size(232, 22);
             this.txtMAMH.TabIndex = 1;
-            // 
-            // dS1
-            // 
-            this.dS1.DataSetName = "DS1";
-            this.dS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bdsMONHOC
-            // 
-            this.bdsMONHOC.DataMember = "MONHOC";
-            this.bdsMONHOC.DataSource = this.dS1;
             // 
             // mONHOCTableAdapter1
             // 
@@ -464,14 +470,14 @@
             this.tableAdapterManager1.SINHVIENTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = QLDSV_TC.DS1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // lOPTINCHITableAdapter1
+            // 
+            this.lOPTINCHITableAdapter1.ClearBeforeFill = true;
+            // 
             // bdsLOPTC
             // 
             this.bdsLOPTC.DataMember = "FK_LOPTINCHI_MONHOC";
             this.bdsLOPTC.DataSource = this.bdsMONHOC;
-            // 
-            // lOPTINCHITableAdapter1
-            // 
-            this.lOPTINCHITableAdapter1.ClearBeforeFill = true;
             // 
             // frmMonHoc
             // 
@@ -489,6 +495,8 @@
             this.Load += new System.EventHandler(this.frmMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMONHOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -499,8 +507,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.spinSOTIETLT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTENMH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMAMH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
