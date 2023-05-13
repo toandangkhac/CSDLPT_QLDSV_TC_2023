@@ -40,9 +40,9 @@
             // cmbKhoa
             // 
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(303, 120);
+            this.cmbKhoa.Location = new System.Drawing.Point(355, 120);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(121, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(184, 24);
             this.cmbKhoa.TabIndex = 0;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             this.cmbKhoa.SelectionChangeCommitted += new System.EventHandler(this.cmbKhoa_SelectionChangeCommitted);
@@ -54,9 +54,9 @@
             "2020-2021",
             "2021-2022",
             "2022-2023"});
-            this.cmbNienKhoa.Location = new System.Drawing.Point(303, 195);
+            this.cmbNienKhoa.Location = new System.Drawing.Point(355, 195);
             this.cmbNienKhoa.Name = "cmbNienKhoa";
-            this.cmbNienKhoa.Size = new System.Drawing.Size(121, 24);
+            this.cmbNienKhoa.Size = new System.Drawing.Size(184, 24);
             this.cmbNienKhoa.TabIndex = 1;
             // 
             // cmbHocKy
@@ -66,22 +66,23 @@
             "1",
             "2",
             "3"});
-            this.cmbHocKy.Location = new System.Drawing.Point(303, 258);
+            this.cmbHocKy.Location = new System.Drawing.Point(355, 258);
             this.cmbHocKy.Name = "cmbHocKy";
-            this.cmbHocKy.Size = new System.Drawing.Size(121, 24);
+            this.cmbHocKy.Size = new System.Drawing.Size(184, 24);
             this.cmbHocKy.TabIndex = 2;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(119, 120);
+            this.labelControl1.Location = new System.Drawing.Point(195, 123);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(32, 16);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "KHOA";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(119, 176);
+            this.labelControl2.Location = new System.Drawing.Point(195, 198);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(63, 16);
             this.labelControl2.TabIndex = 4;
@@ -89,7 +90,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(119, 239);
+            this.labelControl3.Location = new System.Drawing.Point(195, 261);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(43, 16);
             this.labelControl3.TabIndex = 5;
@@ -97,7 +98,7 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(290, 333);
+            this.btnPreview.Location = new System.Drawing.Point(396, 328);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(94, 29);
             this.btnPreview.TabIndex = 6;

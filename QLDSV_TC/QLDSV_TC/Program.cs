@@ -131,7 +131,13 @@ namespace QLDSV_TC
             Application.SetCompatibleTextRenderingDefault(false);
             frmDN = new frmDangNhap();
             Application.Run(frmDN);
-            //Application.Run(new frmLop());
+            //double a = 5.5;
+            //string b = a.ToString();
+            //Console.WriteLine(b);
+            //Console.WriteLine(int.Parse(b));
+            
+
+            //Application.Run(new frmNhapDiem());
 
         }
 

@@ -33,12 +33,12 @@
             System.Windows.Forms.Label sOSVTOITHIEULabel;
             System.Windows.Forms.Label mAKHOALabel;
             System.Windows.Forms.Label mAGVLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLopTinChi));
             System.Windows.Forms.Label nIENKHOALabel;
             System.Windows.Forms.Label nHOMLabel;
             System.Windows.Forms.Label hOCKYLabel;
             System.Windows.Forms.Label hUYLOPLabel;
             System.Windows.Forms.Label mALTCLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLopTinChi));
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -72,6 +72,11 @@
             this.colHUYLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pnlLOPTC = new DevExpress.XtraEditors.PanelControl();
+            this.spinMALTC = new DevExpress.XtraEditors.SpinEdit();
+            this.chkHUYLOP = new System.Windows.Forms.CheckBox();
+            this.cmbHOCKY = new System.Windows.Forms.ComboBox();
+            this.cmbNHOM = new System.Windows.Forms.ComboBox();
+            this.cmbNIENKHOA = new System.Windows.Forms.ComboBox();
             this.cmbGV = new System.Windows.Forms.ComboBox();
             this.cmbMONHOC = new System.Windows.Forms.ComboBox();
             this.spinSVTOITHIEU = new DevExpress.XtraEditors.SpinEdit();
@@ -83,11 +88,6 @@
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbNIENKHOA = new System.Windows.Forms.ComboBox();
-            this.cmbNHOM = new System.Windows.Forms.ComboBox();
-            this.cmbHOCKY = new System.Windows.Forms.ComboBox();
-            this.chkHUYLOP = new System.Windows.Forms.CheckBox();
-            this.spinMALTC = new DevExpress.XtraEditors.SpinEdit();
             mAMHLabel = new System.Windows.Forms.Label();
             sOSVTOITHIEULabel = new System.Windows.Forms.Label();
             mAKHOALabel = new System.Windows.Forms.Label();
@@ -106,12 +106,12 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLOPTC)).BeginInit();
             this.pnlLOPTC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinMALTC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSVTOITHIEU.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMAKHOA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spinMALTC.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // mAMHLabel
@@ -154,13 +154,59 @@
             mAGVLabel.TabIndex = 10;
             mAGVLabel.Text = "Giảng viên:";
             // 
+            // nIENKHOALabel
+            // 
+            nIENKHOALabel.AutoSize = true;
+            nIENKHOALabel.Location = new System.Drawing.Point(26, 152);
+            nIENKHOALabel.Name = "nIENKHOALabel";
+            nIENKHOALabel.Size = new System.Drawing.Size(71, 16);
+            nIENKHOALabel.TabIndex = 22;
+            nIENKHOALabel.Text = "NIENKHOA:";
+            // 
+            // nHOMLabel
+            // 
+            nHOMLabel.AutoSize = true;
+            nHOMLabel.Location = new System.Drawing.Point(26, 101);
+            nHOMLabel.Name = "nHOMLabel";
+            nHOMLabel.Size = new System.Drawing.Size(47, 16);
+            nHOMLabel.TabIndex = 23;
+            nHOMLabel.Text = "NHOM:";
+            nHOMLabel.Click += new System.EventHandler(this.nHOMLabel_Click);
+            // 
+            // hOCKYLabel
+            // 
+            hOCKYLabel.AutoSize = true;
+            hOCKYLabel.Location = new System.Drawing.Point(470, 152);
+            hOCKYLabel.Name = "hOCKYLabel";
+            hOCKYLabel.Size = new System.Drawing.Size(51, 16);
+            hOCKYLabel.TabIndex = 24;
+            hOCKYLabel.Text = "HOCKY:";
+            // 
+            // hUYLOPLabel
+            // 
+            hUYLOPLabel.AutoSize = true;
+            hUYLOPLabel.Location = new System.Drawing.Point(470, 214);
+            hUYLOPLabel.Name = "hUYLOPLabel";
+            hUYLOPLabel.Size = new System.Drawing.Size(57, 16);
+            hUYLOPLabel.TabIndex = 25;
+            hUYLOPLabel.Text = "HUYLOP:";
+            // 
+            // mALTCLabel
+            // 
+            mALTCLabel.AutoSize = true;
+            mALTCLabel.Location = new System.Drawing.Point(26, 45);
+            mALTCLabel.Name = "mALTCLabel";
+            mALTCLabel.Size = new System.Drawing.Size(52, 16);
+            mALTCLabel.TabIndex = 26;
+            mALTCLabel.Text = "MALTC:";
+            // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl3.Location = new System.Drawing.Point(0, 56);
             this.barDockControl3.Manager = null;
-            this.barDockControl3.Size = new System.Drawing.Size(1690, 0);
+            this.barDockControl3.Size = new System.Drawing.Size(1711, 0);
             // 
             // barManager1
             // 
@@ -288,7 +334,7 @@
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.barManager1;
-            this.barDockControl1.Size = new System.Drawing.Size(1690, 56);
+            this.barDockControl1.Size = new System.Drawing.Size(1711, 56);
             // 
             // barDockControlBottom
             // 
@@ -296,7 +342,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 1274);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1690, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1711, 0);
             // 
             // barDockControlLeft
             // 
@@ -310,7 +356,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1690, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(1711, 56);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 1218);
             // 
@@ -334,7 +380,7 @@
             this.gcLOPTC.MainView = this.gridView1;
             this.gcLOPTC.MenuManager = this.barManager1;
             this.gcLOPTC.Name = "gcLOPTC";
-            this.gcLOPTC.Size = new System.Drawing.Size(1686, 244);
+            this.gcLOPTC.Size = new System.Drawing.Size(1707, 244);
             this.gcLOPTC.TabIndex = 6;
             this.gcLOPTC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -366,6 +412,7 @@
             // 
             // colMALTC
             // 
+            this.colMALTC.Caption = "Mã lớp tín chỉ";
             this.colMALTC.FieldName = "MALTC";
             this.colMALTC.MinWidth = 25;
             this.colMALTC.Name = "colMALTC";
@@ -376,6 +423,7 @@
             // 
             // colNIENKHOA
             // 
+            this.colNIENKHOA.Caption = "Niên khóa";
             this.colNIENKHOA.FieldName = "NIENKHOA";
             this.colNIENKHOA.MinWidth = 25;
             this.colNIENKHOA.Name = "colNIENKHOA";
@@ -386,6 +434,7 @@
             // 
             // colHOCKY
             // 
+            this.colHOCKY.Caption = "Học kỳ";
             this.colHOCKY.FieldName = "HOCKY";
             this.colHOCKY.MinWidth = 25;
             this.colHOCKY.Name = "colHOCKY";
@@ -396,6 +445,7 @@
             // 
             // colMAMH
             // 
+            this.colMAMH.Caption = "Mã môn học";
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 25;
             this.colMAMH.Name = "colMAMH";
@@ -406,6 +456,7 @@
             // 
             // colNHOM
             // 
+            this.colNHOM.Caption = "Nhóm";
             this.colNHOM.FieldName = "NHOM";
             this.colNHOM.MinWidth = 25;
             this.colNHOM.Name = "colNHOM";
@@ -416,6 +467,7 @@
             // 
             // colMAGV
             // 
+            this.colMAGV.Caption = "Mã giảng viên";
             this.colMAGV.FieldName = "MAGV";
             this.colMAGV.MinWidth = 25;
             this.colMAGV.Name = "colMAGV";
@@ -426,6 +478,7 @@
             // 
             // colMAKHOA
             // 
+            this.colMAKHOA.Caption = "Mã khoa";
             this.colMAKHOA.FieldName = "MAKHOA";
             this.colMAKHOA.MinWidth = 25;
             this.colMAKHOA.Name = "colMAKHOA";
@@ -436,6 +489,7 @@
             // 
             // colSOSVTOITHIEU
             // 
+            this.colSOSVTOITHIEU.Caption = "Số sinh viên tối thiểu";
             this.colSOSVTOITHIEU.FieldName = "SOSVTOITHIEU";
             this.colSOSVTOITHIEU.MinWidth = 25;
             this.colSOSVTOITHIEU.Name = "colSOSVTOITHIEU";
@@ -446,6 +500,7 @@
             // 
             // colHUYLOP
             // 
+            this.colHUYLOP.Caption = "Hủy lớp";
             this.colHUYLOP.FieldName = "HUYLOP";
             this.colHUYLOP.MinWidth = 25;
             this.colHUYLOP.Name = "colHUYLOP";
@@ -461,7 +516,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 105);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1690, 1169);
+            this.panelControl1.Size = new System.Drawing.Size(1711, 1169);
             this.panelControl1.TabIndex = 7;
             // 
             // pnlLOPTC
@@ -489,6 +544,73 @@
             this.pnlLOPTC.Name = "pnlLOPTC";
             this.pnlLOPTC.Size = new System.Drawing.Size(1604, 401);
             this.pnlLOPTC.TabIndex = 1;
+            // 
+            // spinMALTC
+            // 
+            this.spinMALTC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTC, "MALTC", true));
+            this.spinMALTC.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.spinMALTC.Location = new System.Drawing.Point(195, 41);
+            this.spinMALTC.MenuManager = this.barManager1;
+            this.spinMALTC.Name = "spinMALTC";
+            this.spinMALTC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinMALTC.Properties.ReadOnly = true;
+            this.spinMALTC.Size = new System.Drawing.Size(134, 24);
+            this.spinMALTC.TabIndex = 27;
+            // 
+            // chkHUYLOP
+            // 
+            this.chkHUYLOP.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsLOPTC, "HUYLOP", true));
+            this.chkHUYLOP.Location = new System.Drawing.Point(652, 209);
+            this.chkHUYLOP.Name = "chkHUYLOP";
+            this.chkHUYLOP.Size = new System.Drawing.Size(104, 24);
+            this.chkHUYLOP.TabIndex = 26;
+            this.chkHUYLOP.UseVisualStyleBackColor = true;
+            // 
+            // cmbHOCKY
+            // 
+            this.cmbHOCKY.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOPTC, "HOCKY", true));
+            this.cmbHOCKY.FormattingEnabled = true;
+            this.cmbHOCKY.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmbHOCKY.Location = new System.Drawing.Point(654, 149);
+            this.cmbHOCKY.Name = "cmbHOCKY";
+            this.cmbHOCKY.Size = new System.Drawing.Size(121, 24);
+            this.cmbHOCKY.TabIndex = 25;
+            // 
+            // cmbNHOM
+            // 
+            this.cmbNHOM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOPTC, "NHOM", true));
+            this.cmbNHOM.FormattingEnabled = true;
+            this.cmbNHOM.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmbNHOM.Location = new System.Drawing.Point(195, 99);
+            this.cmbNHOM.Name = "cmbNHOM";
+            this.cmbNHOM.Size = new System.Drawing.Size(134, 24);
+            this.cmbNHOM.TabIndex = 24;
+            // 
+            // cmbNIENKHOA
+            // 
+            this.cmbNIENKHOA.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOPTC, "NIENKHOA", true));
+            this.cmbNIENKHOA.FormattingEnabled = true;
+            this.cmbNIENKHOA.Items.AddRange(new object[] {
+            "2020-2021",
+            "2021-2022",
+            "2022-2023"});
+            this.cmbNIENKHOA.Location = new System.Drawing.Point(195, 150);
+            this.cmbNIENKHOA.Name = "cmbNIENKHOA";
+            this.cmbNIENKHOA.Size = new System.Drawing.Size(134, 24);
+            this.cmbNIENKHOA.TabIndex = 23;
             // 
             // cmbGV
             // 
@@ -573,7 +695,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 56);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1690, 49);
+            this.panelControl3.Size = new System.Drawing.Size(1711, 49);
             this.panelControl3.TabIndex = 37;
             // 
             // cmbKhoa
@@ -596,125 +718,12 @@
             this.labelControl3.TabIndex = 34;
             this.labelControl3.Text = "Khoa";
             // 
-            // nIENKHOALabel
-            // 
-            nIENKHOALabel.AutoSize = true;
-            nIENKHOALabel.Location = new System.Drawing.Point(26, 152);
-            nIENKHOALabel.Name = "nIENKHOALabel";
-            nIENKHOALabel.Size = new System.Drawing.Size(71, 16);
-            nIENKHOALabel.TabIndex = 22;
-            nIENKHOALabel.Text = "NIENKHOA:";
-            // 
-            // cmbNIENKHOA
-            // 
-            this.cmbNIENKHOA.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOPTC, "NIENKHOA", true));
-            this.cmbNIENKHOA.FormattingEnabled = true;
-            this.cmbNIENKHOA.Items.AddRange(new object[] {
-            "2020-2021",
-            "2021-2022",
-            "2022-2023"});
-            this.cmbNIENKHOA.Location = new System.Drawing.Point(195, 150);
-            this.cmbNIENKHOA.Name = "cmbNIENKHOA";
-            this.cmbNIENKHOA.Size = new System.Drawing.Size(134, 24);
-            this.cmbNIENKHOA.TabIndex = 23;
-            // 
-            // nHOMLabel
-            // 
-            nHOMLabel.AutoSize = true;
-            nHOMLabel.Location = new System.Drawing.Point(26, 101);
-            nHOMLabel.Name = "nHOMLabel";
-            nHOMLabel.Size = new System.Drawing.Size(47, 16);
-            nHOMLabel.TabIndex = 23;
-            nHOMLabel.Text = "NHOM:";
-            nHOMLabel.Click += new System.EventHandler(this.nHOMLabel_Click);
-            // 
-            // cmbNHOM
-            // 
-            this.cmbNHOM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOPTC, "NHOM", true));
-            this.cmbNHOM.FormattingEnabled = true;
-            this.cmbNHOM.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cmbNHOM.Location = new System.Drawing.Point(195, 99);
-            this.cmbNHOM.Name = "cmbNHOM";
-            this.cmbNHOM.Size = new System.Drawing.Size(134, 24);
-            this.cmbNHOM.TabIndex = 24;
-            // 
-            // hOCKYLabel
-            // 
-            hOCKYLabel.AutoSize = true;
-            hOCKYLabel.Location = new System.Drawing.Point(470, 152);
-            hOCKYLabel.Name = "hOCKYLabel";
-            hOCKYLabel.Size = new System.Drawing.Size(51, 16);
-            hOCKYLabel.TabIndex = 24;
-            hOCKYLabel.Text = "HOCKY:";
-            // 
-            // cmbHOCKY
-            // 
-            this.cmbHOCKY.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOPTC, "HOCKY", true));
-            this.cmbHOCKY.FormattingEnabled = true;
-            this.cmbHOCKY.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cmbHOCKY.Location = new System.Drawing.Point(654, 149);
-            this.cmbHOCKY.Name = "cmbHOCKY";
-            this.cmbHOCKY.Size = new System.Drawing.Size(121, 24);
-            this.cmbHOCKY.TabIndex = 25;
-            // 
-            // hUYLOPLabel
-            // 
-            hUYLOPLabel.AutoSize = true;
-            hUYLOPLabel.Location = new System.Drawing.Point(470, 214);
-            hUYLOPLabel.Name = "hUYLOPLabel";
-            hUYLOPLabel.Size = new System.Drawing.Size(57, 16);
-            hUYLOPLabel.TabIndex = 25;
-            hUYLOPLabel.Text = "HUYLOP:";
-            // 
-            // chkHUYLOP
-            // 
-            this.chkHUYLOP.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsLOPTC, "HUYLOP", true));
-            this.chkHUYLOP.Location = new System.Drawing.Point(652, 209);
-            this.chkHUYLOP.Name = "chkHUYLOP";
-            this.chkHUYLOP.Size = new System.Drawing.Size(104, 24);
-            this.chkHUYLOP.TabIndex = 26;
-            this.chkHUYLOP.UseVisualStyleBackColor = true;
-            // 
-            // mALTCLabel
-            // 
-            mALTCLabel.AutoSize = true;
-            mALTCLabel.Location = new System.Drawing.Point(26, 45);
-            mALTCLabel.Name = "mALTCLabel";
-            mALTCLabel.Size = new System.Drawing.Size(52, 16);
-            mALTCLabel.TabIndex = 26;
-            mALTCLabel.Text = "MALTC:";
-            // 
-            // spinMALTC
-            // 
-            this.spinMALTC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTC, "MALTC", true));
-            this.spinMALTC.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spinMALTC.Location = new System.Drawing.Point(195, 41);
-            this.spinMALTC.MenuManager = this.barManager1;
-            this.spinMALTC.Name = "spinMALTC";
-            this.spinMALTC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinMALTC.Properties.ReadOnly = true;
-            this.spinMALTC.Size = new System.Drawing.Size(134, 24);
-            this.spinMALTC.TabIndex = 27;
-            // 
             // frmLopTinChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1711, 1055);
+            this.ClientSize = new System.Drawing.Size(1732, 1055);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControl3);
@@ -735,13 +744,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlLOPTC)).EndInit();
             this.pnlLOPTC.ResumeLayout(false);
             this.pnlLOPTC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinMALTC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSVTOITHIEU.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMAKHOA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spinMALTC.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

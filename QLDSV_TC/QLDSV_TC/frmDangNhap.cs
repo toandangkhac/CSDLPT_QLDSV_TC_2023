@@ -69,7 +69,8 @@ namespace QLDSV_TC
 
         private void FormDangNhap_Load(object sender, EventArgs e)
         {
-            if(KetNoi_CSDLGOC() == 0)
+            
+            if (KetNoi_CSDLGOC() == 0)
             {
                 return;
             }
@@ -187,6 +188,11 @@ namespace QLDSV_TC
                 cmbKhoa.Enabled = true;
             }
             
+        }
+
+        private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
