@@ -83,6 +83,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSdangKyLTC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSdangKyLTC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKyLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKyLTC.Designer.cs">
+      <DependentUpon>frmDangKyLTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +138,9 @@
     <Compile Include="XfrmDSLopTCtheoNienKhoaHocKy.Designer.cs">
       <DependentUpon>XfrmDSLopTCtheoNienKhoaHocKy.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmDangKyLTC.resx">
+      <DependentUpon>frmDangKyLTC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +195,17 @@
     </None>
     <None Include="DS1.xss">
       <DependentUpon>DS1.xsd</DependentUpon>
+    </None>
+    <None Include="DSdangKyLTC.xsc">
+      <DependentUpon>DSdangKyLTC.xsd</DependentUpon>
+    </None>
+    <None Include="DSdangKyLTC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSdangKyLTC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSdangKyLTC.xss">
+      <DependentUpon>DSdangKyLTC.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.Columns.GridColumn colDIEM_HM;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapDiem));
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.cmbNienKhoa = new System.Windows.Forms.ComboBox();
             this.cmbHocKy = new System.Windows.Forms.ComboBox();
@@ -60,6 +61,7 @@
             this.sp_ds_loptc_de_nhap_diemTableAdapter = new QLDSV_TC.DS1TableAdapters.sp_ds_loptc_de_nhap_diemTableAdapter();
             this.tableAdapterManager = new QLDSV_TC.DS1TableAdapters.TableAdapterManager();
             this.ds_sv_dki_loptc_de_nhapdiemTableAdapter = new QLDSV_TC.DS1TableAdapters.ds_sv_dki_loptc_de_nhapdiemTableAdapter();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             colDIEM_HM = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcDKY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDSSVDKI)).BeginInit();
@@ -147,6 +149,7 @@
             // 
             // btnTaiLoptc
             // 
+            this.btnTaiLoptc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiLoptc.ImageOptions.Image")));
             this.btnTaiLoptc.Location = new System.Drawing.Point(897, 20);
             this.btnTaiLoptc.Name = "btnTaiLoptc";
             this.btnTaiLoptc.Size = new System.Drawing.Size(188, 29);
@@ -156,6 +159,7 @@
             // 
             // btnNhapDiem
             // 
+            this.btnNhapDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapDiem.ImageOptions.Image")));
             this.btnNhapDiem.Location = new System.Drawing.Point(1146, 20);
             this.btnNhapDiem.Name = "btnNhapDiem";
             this.btnNhapDiem.Size = new System.Drawing.Size(118, 29);
@@ -165,6 +169,7 @@
             // 
             // btnGhi
             // 
+            this.btnGhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.Image")));
             this.btnGhi.Location = new System.Drawing.Point(1321, 20);
             this.btnGhi.Name = "btnGhi";
             this.btnGhi.Size = new System.Drawing.Size(106, 29);
@@ -179,7 +184,7 @@
             this.gcDKY.Location = new System.Drawing.Point(2, 331);
             this.gcDKY.MainView = this.gridView1;
             this.gcDKY.Name = "gcDKY";
-            this.gcDKY.Size = new System.Drawing.Size(1540, 351);
+            this.gcDKY.Size = new System.Drawing.Size(1775, 351);
             this.gcDKY.TabIndex = 9;
             this.gcDKY.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -265,7 +270,7 @@
             this.gcDSLTC.Location = new System.Drawing.Point(2, 2);
             this.gcDSLTC.MainView = this.gridView2;
             this.gcDSLTC.Name = "gcDSLTC";
-            this.gcDSLTC.Size = new System.Drawing.Size(1540, 329);
+            this.gcDSLTC.Size = new System.Drawing.Size(1775, 329);
             this.gcDSLTC.TabIndex = 10;
             this.gcDSLTC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -331,6 +336,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btnThoat);
             this.panelControl1.Controls.Add(this.cmbKhoa);
             this.panelControl1.Controls.Add(this.cmbNienKhoa);
             this.panelControl1.Controls.Add(this.cmbHocKy);
@@ -343,7 +349,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1544, 69);
+            this.panelControl1.Size = new System.Drawing.Size(1779, 69);
             this.panelControl1.TabIndex = 11;
             // 
             // panelControl2
@@ -353,7 +359,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 69);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1544, 671);
+            this.panelControl2.Size = new System.Drawing.Size(1779, 671);
             this.panelControl2.TabIndex = 12;
             // 
             // sp_ds_loptc_de_nhap_diemTableAdapter
@@ -377,11 +383,21 @@
             // 
             this.ds_sv_dki_loptc_de_nhapdiemTableAdapter.ClearBeforeFill = true;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(1524, 21);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(94, 29);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // frmNhapDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1544, 740);
+            this.ClientSize = new System.Drawing.Size(1779, 740);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmNhapDiem";
@@ -436,5 +452,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_CC;
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_GK;
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_CK;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }

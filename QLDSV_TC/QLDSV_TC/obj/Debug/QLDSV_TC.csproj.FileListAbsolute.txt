@@ -230,3 +230,4 @@ D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.Diagram.v22.2.Core.xml
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.XfrmDSLopTCtheoNienKhoaHocKy.resources
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmNhapDiem.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmDangKyLTC.resources

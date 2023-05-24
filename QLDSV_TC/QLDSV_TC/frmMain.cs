@@ -171,6 +171,22 @@ namespace QLDSV_TC
         {
             Application.Exit();
         }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDangKyLTC));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmDangKyLTC f = new frmDangKyLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+
+        }
     }
 
 }

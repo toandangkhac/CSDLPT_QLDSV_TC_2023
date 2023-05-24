@@ -539,10 +539,11 @@
             this.pnlLOPTC.Controls.Add(mAKHOALabel);
             this.pnlLOPTC.Controls.Add(this.txtMAKHOA);
             this.pnlLOPTC.Controls.Add(mAGVLabel);
-            this.pnlLOPTC.Location = new System.Drawing.Point(2, 386);
+            this.pnlLOPTC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLOPTC.Location = new System.Drawing.Point(2, 246);
             this.pnlLOPTC.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLOPTC.Name = "pnlLOPTC";
-            this.pnlLOPTC.Size = new System.Drawing.Size(1604, 401);
+            this.pnlLOPTC.Size = new System.Drawing.Size(1707, 921);
             this.pnlLOPTC.TabIndex = 1;
             // 
             // spinMALTC

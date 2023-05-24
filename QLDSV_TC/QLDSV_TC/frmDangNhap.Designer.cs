@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblKhoa = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtLogin = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -58,15 +58,16 @@
             this.cmbKhoa.TabIndex = 0;
             this.cmbKhoa.Text = "-- Chọn khoa --";
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
+            this.cmbKhoa.SelectionChangeCommitted += new System.EventHandler(this.cmbKhoa_SelectionChangeCommitted);
             // 
-            // labelControl1
+            // lblKhoa
             // 
-            this.labelControl1.Location = new System.Drawing.Point(80, 92);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(28, 16);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Khoa";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            this.lblKhoa.Location = new System.Drawing.Point(80, 92);
+            this.lblKhoa.Name = "lblKhoa";
+            this.lblKhoa.Size = new System.Drawing.Size(28, 16);
+            this.lblKhoa.TabIndex = 1;
+            this.lblKhoa.Text = "Khoa";
+            this.lblKhoa.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // labelControl2
             // 
@@ -128,7 +129,7 @@
             this.panelControl1.Controls.Add(this.txtLogin);
             this.panelControl1.Controls.Add(this.btnLogin);
             this.panelControl1.Controls.Add(this.cmbKhoa);
-            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.lblKhoa);
             this.panelControl1.Controls.Add(this.txtPass);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl3);
@@ -210,7 +211,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cmbKhoa;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblKhoa;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtLogin;
         private DevExpress.XtraEditors.LabelControl labelControl3;

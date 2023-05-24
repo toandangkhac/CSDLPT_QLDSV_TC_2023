@@ -199,6 +199,10 @@ namespace QLDSV_TC
                 Console.WriteLine("MALTC: " + dt.Rows[i]["MALTC"]  + ",MASV: " + dt.Rows[i]["MASV"] + ",DIEMCC: " + dt.Rows[i]["DIEM_CC"] + ", DIEMGK: " + dt.Rows[i]["DIEM_GK"] + ", DIEMCK: " + dt.Rows[i]["DIEM_CK"]);
             }
         }
-        
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

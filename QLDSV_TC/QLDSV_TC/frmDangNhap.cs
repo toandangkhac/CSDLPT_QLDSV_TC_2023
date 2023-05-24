@@ -148,6 +148,7 @@ namespace QLDSV_TC
             Program.frmChinh.MA.Text = "Mã SV = " + Program.username;
             Program.frmChinh.HOTEN.Text = "Họ Tên = " + Program.mHoten;
             Program.frmChinh.NHOM.Text = "Nhóm = " + Program.mGroup;
+            Program.frmChinh.TENSV.Text = "Ten sv: " + Program.servername;
             Program.frmDN.Hide();
         }
 
@@ -168,11 +169,14 @@ namespace QLDSV_TC
             {
                 // Keep track of the selected RadioButton by saving a reference
                 // to it.
-                cmbKhoa.Enabled = true;
+                cmbKhoa.Visible = true;
+                lblKhoa.Visible=true;
+                
             }
             else
             {
-                cmbKhoa.Enabled = false;
+                cmbKhoa.Visible = false;
+                lblKhoa.Visible = false;
             }
 
         }
@@ -181,11 +185,13 @@ namespace QLDSV_TC
         {
             if (radSinhVien.Checked)
             {
-                cmbKhoa.Enabled = false;
+                cmbKhoa.Visible = false;
+                lblKhoa.Visible = false;
             }
             else
             {
-                cmbKhoa.Enabled = true;
+                cmbKhoa.Visible = true;
+                lblKhoa.Visible = true;
             }
             
         }
@@ -193,6 +199,19 @@ namespace QLDSV_TC
         private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cmbKhoa_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                // gan ten server de ket noi khi chon khoa tren combobox
+                Program.servername = cmbKhoa.SelectedValue.ToString();
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
