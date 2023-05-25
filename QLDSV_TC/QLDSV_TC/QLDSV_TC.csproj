@@ -88,6 +88,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSdangKyLTC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSDongHocPhi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDongHocPhi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSXrpt_dssvDkyLTC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSXrpt_dssvDkyLTC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmDangKyLTC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +142,65 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XfrmBangDiemHetMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XfrmBangDiemHetMon.Designer.cs">
+      <DependentUpon>XfrmBangDiemHetMon.cs</DependentUpon>
+    </Compile>
     <Compile Include="XfrmDSLopTCtheoNienKhoaHocKy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="XfrmDSLopTCtheoNienKhoaHocKy.Designer.cs">
       <DependentUpon>XfrmDSLopTCtheoNienKhoaHocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XfrmDSSVDkyLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XfrmDSSVDkyLTC.Designer.cs">
+      <DependentUpon>XfrmDSSVDkyLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XfrmPhieuDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XfrmPhieuDiem.Designer.cs">
+      <DependentUpon>XfrmPhieuDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xfrm_dsDongHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xfrm_dsDongHocPhi.Designer.cs">
+      <DependentUpon>Xfrm_dsDongHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_BangDiemHetMon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_BangDiemHetMon.Designer.cs">
+      <DependentUpon>Xrpt_BangDiemHetMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_DsLTCtheoNienKhoaHocKy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_DsLTCtheoNienKhoaHocKy.Designer.cs">
+      <DependentUpon>Xrpt_DsLTCtheoNienKhoaHocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_dssvDkyLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_dssvDkyLTC.Designer.cs">
+      <DependentUpon>Xrpt_dssvDkyLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_ds_donghocphi_theolop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_ds_donghocphi_theolop.Designer.cs">
+      <DependentUpon>Xrpt_ds_donghocphi_theolop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_PhieuDiem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_PhieuDiem.Designer.cs">
+      <DependentUpon>Xrpt_PhieuDiem.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmDangKyLTC.resx">
       <DependentUpon>frmDangKyLTC.cs</DependentUpon>
@@ -170,8 +234,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="XfrmBangDiemHetMon.resx">
+      <DependentUpon>XfrmBangDiemHetMon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XfrmDSLopTCtheoNienKhoaHocKy.resx">
       <DependentUpon>XfrmDSLopTCtheoNienKhoaHocKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XfrmDSSVDkyLTC.resx">
+      <DependentUpon>XfrmDSSVDkyLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XfrmPhieuDiem.resx">
+      <DependentUpon>XfrmPhieuDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xfrm_dsDongHocPhi.resx">
+      <DependentUpon>Xfrm_dsDongHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_BangDiemHetMon.resx">
+      <DependentUpon>Xrpt_BangDiemHetMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_DsLTCtheoNienKhoaHocKy.resx">
+      <DependentUpon>Xrpt_DsLTCtheoNienKhoaHocKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_dssvDkyLTC.resx">
+      <DependentUpon>Xrpt_dssvDkyLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_ds_donghocphi_theolop.resx">
+      <DependentUpon>Xrpt_ds_donghocphi_theolop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_PhieuDiem.resx">
+      <DependentUpon>Xrpt_PhieuDiem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="DS.xsc">
@@ -206,6 +297,28 @@
     </None>
     <None Include="DSdangKyLTC.xss">
       <DependentUpon>DSdangKyLTC.xsd</DependentUpon>
+    </None>
+    <None Include="DSDongHocPhi.xsc">
+      <DependentUpon>DSDongHocPhi.xsd</DependentUpon>
+    </None>
+    <None Include="DSDongHocPhi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDongHocPhi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSDongHocPhi.xss">
+      <DependentUpon>DSDongHocPhi.xsd</DependentUpon>
+    </None>
+    <None Include="DSXrpt_dssvDkyLTC.xsc">
+      <DependentUpon>DSXrpt_dssvDkyLTC.xsd</DependentUpon>
+    </None>
+    <None Include="DSXrpt_dssvDkyLTC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSXrpt_dssvDkyLTC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSXrpt_dssvDkyLTC.xss">
+      <DependentUpon>DSXrpt_dssvDkyLTC.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

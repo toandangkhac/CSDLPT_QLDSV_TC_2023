@@ -37,7 +37,18 @@ namespace QLDSV_TC.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9QNDCS8\\SQLSERVER1;Initial Catalog=QLDSV_TC;User ID=sa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9QNDCS8\\SQLSERVER2;Initial Catalog=QLDSV_TC;User ID=sa")]
+        public string QLDSV_TCConnectionString2 {
+            get {
+                return ((string)(this["QLDSV_TCConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9QNDCS8\\SQLSERVER1;Initial Catalog=QLDSV_TC;User ID=sa;Passwo" +
+            "rd=123456")]
         public string QLDSV_TCConnectionString1 {
             get {
                 return ((string)(this["QLDSV_TCConnectionString1"]));
@@ -47,10 +58,11 @@ namespace QLDSV_TC.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9QNDCS8\\SQLSERVER2;Initial Catalog=QLDSV_TC;User ID=sa")]
-        public string QLDSV_TCConnectionString2 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9QNDCS8\\SQLSERVER3;Initial Catalog=QLDSV_TC;User ID=sa;Passwo" +
+            "rd=123456")]
+        public string QLDSV_TCConnectionString3 {
             get {
-                return ((string)(this["QLDSV_TCConnectionString2"]));
+                return ((string)(this["QLDSV_TCConnectionString3"]));
             }
         }
     }

@@ -231,3 +231,12 @@ D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.XfrmDSLopTCtheoNienKhoaHocKy.resources
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmNhapDiem.resources
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmDangKyLTC.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xrpt_DsLTCtheoNienKhoaHocKy.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.XfrmDSSVDkyLTC.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xrpt_dssvDkyLTC.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.XfrmBangDiemHetMon.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xrpt_BangDiemHetMon.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.XfrmPhieuDiem.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xrpt_PhieuDiem.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xfrm_dsDongHocPhi.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xrpt_ds_donghocphi_theolop.resources

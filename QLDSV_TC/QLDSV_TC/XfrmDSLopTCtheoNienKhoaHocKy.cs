@@ -63,13 +63,13 @@ namespace QLDSV_TC
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            //XrptDSLopTCtheoNienKhoaHocKy xfrm = new XrptDSLopTCtheoNienKhoaHocKy(cmbNienKhoa.Text, Int32.Parse(cmbHocKy.Text));
-            //xfrm.xrlblKHOA.Text = cmbKhoa.Text;
-            //xfrm.xrlblNIENKHOA.Text = cmbNienKhoa.Text;
-            //xfrm.xrlblHOCKY.Text = cmbHocKy.Text;
+            Xrpt_DsLTCtheoNienKhoaHocKy xfrm = new Xrpt_DsLTCtheoNienKhoaHocKy(cmbNienKhoa.Text, Int32.Parse(cmbHocKy.Text));
+            xfrm.xrlblKHOA.Text = cmbKhoa.Text;
+            xfrm.xrlblNIENKHOA.Text = cmbNienKhoa.Text;
+            xfrm.xrlblHOCKY.Text = cmbHocKy.Text;
 
-            //ReportPrintTool print = new ReportPrintTool(xfrm);
-            //print.ShowPreviewDialog();
+            ReportPrintTool print = new ReportPrintTool(xfrm);
+            print.ShowPreviewDialog();
         }
 
         private void cmbKhoa_SelectionChangeCommitted(object sender, EventArgs e)

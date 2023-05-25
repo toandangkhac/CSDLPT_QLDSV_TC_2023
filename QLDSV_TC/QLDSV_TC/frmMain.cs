@@ -187,6 +187,66 @@ namespace QLDSV_TC
             }
 
         }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(XfrmDSSVDkyLTC));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                XfrmDSSVDkyLTC f = new XfrmDSSVDkyLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(XfrmBangDiemHetMon));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                XfrmBangDiemHetMon f = new XfrmBangDiemHetMon();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(XfrmPhieuDiem));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                XfrmPhieuDiem f = new XfrmPhieuDiem();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(Xfrm_dsDongHocPhi));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                Xfrm_dsDongHocPhi f = new Xfrm_dsDongHocPhi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 
 }
