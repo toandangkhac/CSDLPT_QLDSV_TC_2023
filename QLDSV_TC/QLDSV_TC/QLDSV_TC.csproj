@@ -193,6 +193,12 @@
     <Compile Include="Xrpt_BangDiemHetMon.Designer.cs">
       <DependentUpon>Xrpt_BangDiemHetMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xrpt_BangDiemTongKet1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_BangDiemTongKet1.Designer.cs">
+      <DependentUpon>Xrpt_BangDiemTongKet1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xrpt_DsLTCtheoNienKhoaHocKy.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Xrpt_BangDiemHetMon.resx">
       <DependentUpon>Xrpt_BangDiemHetMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_BangDiemTongKet1.resx">
+      <DependentUpon>Xrpt_BangDiemTongKet1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xrpt_DsLTCtheoNienKhoaHocKy.resx">
       <DependentUpon>Xrpt_DsLTCtheoNienKhoaHocKy.cs</DependentUpon>
