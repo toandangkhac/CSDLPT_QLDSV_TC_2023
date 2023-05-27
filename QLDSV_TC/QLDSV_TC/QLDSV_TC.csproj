@@ -70,6 +70,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS.cs">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +112,12 @@
     </Compile>
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDongHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDongHocPhi.Designer.cs">
+      <DependentUpon>frmDongHocPhi.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLop.cs">
       <SubType>Form</SubType>
@@ -166,6 +175,12 @@
     <Compile Include="XfrmPhieuDiem.Designer.cs">
       <DependentUpon>XfrmPhieuDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xfrm_BangDiemTongKet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xfrm_BangDiemTongKet.Designer.cs">
+      <DependentUpon>Xfrm_BangDiemTongKet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xfrm_dsDongHocPhi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +223,9 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDongHocPhi.resx">
+      <DependentUpon>frmDongHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLop.resx">
       <DependentUpon>frmLop.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XfrmPhieuDiem.resx">
       <DependentUpon>XfrmPhieuDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xfrm_BangDiemTongKet.resx">
+      <DependentUpon>Xfrm_BangDiemTongKet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xfrm_dsDongHocPhi.resx">
       <DependentUpon>Xfrm_dsDongHocPhi.cs</DependentUpon>

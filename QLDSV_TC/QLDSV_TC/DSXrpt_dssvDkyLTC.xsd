@@ -73,25 +73,25 @@ SELECT MAMH, TENMH, SOTIET_LT, SOTIET_TH FROM MONHOC WHERE (MAMH = @MAMH)</Comma
   <xs:element name="DSXrpt_dssvDkyLTC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSXrpt_dssvDkyLTC" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSXrpt_dssvDkyLTC">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="MONHOC" msprop:Generator_RowClassName="MONHOCRow" msprop:Generator_RowEvHandlerName="MONHOCRowChangeEventHandler" msprop:Generator_RowDeletedName="MONHOCRowDeleted" msprop:Generator_RowDeletingName="MONHOCRowDeleting" msprop:Generator_RowEvArgName="MONHOCRowChangeEvent" msprop:Generator_TablePropName="MONHOC" msprop:Generator_RowChangedName="MONHOCRowChanged" msprop:Generator_UserTableName="MONHOC" msprop:Generator_RowChangingName="MONHOCRowChanging" msprop:Generator_TableClassName="MONHOCDataTable" msprop:Generator_TableVarName="tableMONHOC">
+        <xs:element name="MONHOC" msprop:Generator_RowEvHandlerName="MONHOCRowChangeEventHandler" msprop:Generator_RowDeletedName="MONHOCRowDeleted" msprop:Generator_RowDeletingName="MONHOCRowDeleting" msprop:Generator_RowEvArgName="MONHOCRowChangeEvent" msprop:Generator_TablePropName="MONHOC" msprop:Generator_RowChangedName="MONHOCRowChanged" msprop:Generator_UserTableName="MONHOC" msprop:Generator_RowChangingName="MONHOCRowChanging" msprop:Generator_RowClassName="MONHOCRow" msprop:Generator_TableClassName="MONHOCDataTable" msprop:Generator_TableVarName="tableMONHOC">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MAMH" msprop:Generator_UserColumnName="MAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH">
+              <xs:element name="MAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_UserColumnName="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TENMH" msprop:Generator_UserColumnName="TENMH" msprop:Generator_ColumnPropNameInTable="TENMHColumn" msprop:Generator_ColumnPropNameInRow="TENMH" msprop:Generator_ColumnVarNameInTable="columnTENMH">
+              <xs:element name="TENMH" msprop:Generator_ColumnPropNameInTable="TENMHColumn" msprop:Generator_ColumnPropNameInRow="TENMH" msprop:Generator_UserColumnName="TENMH" msprop:Generator_ColumnVarNameInTable="columnTENMH">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SOTIET_LT" msprop:Generator_UserColumnName="SOTIET_LT" msprop:Generator_ColumnPropNameInTable="SOTIET_LTColumn" msprop:Generator_ColumnPropNameInRow="SOTIET_LT" msprop:Generator_ColumnVarNameInTable="columnSOTIET_LT" type="xs:int" />
-              <xs:element name="SOTIET_TH" msprop:Generator_UserColumnName="SOTIET_TH" msprop:Generator_ColumnPropNameInTable="SOTIET_THColumn" msprop:Generator_ColumnPropNameInRow="SOTIET_TH" msprop:Generator_ColumnVarNameInTable="columnSOTIET_TH" type="xs:int" />
+              <xs:element name="SOTIET_LT" msprop:Generator_ColumnPropNameInTable="SOTIET_LTColumn" msprop:Generator_ColumnPropNameInRow="SOTIET_LT" msprop:Generator_UserColumnName="SOTIET_LT" msprop:Generator_ColumnVarNameInTable="columnSOTIET_LT" type="xs:int" />
+              <xs:element name="SOTIET_TH" msprop:Generator_ColumnPropNameInTable="SOTIET_THColumn" msprop:Generator_ColumnPropNameInRow="SOTIET_TH" msprop:Generator_UserColumnName="SOTIET_TH" msprop:Generator_ColumnVarNameInTable="columnSOTIET_TH" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

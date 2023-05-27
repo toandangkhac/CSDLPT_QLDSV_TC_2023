@@ -57,11 +57,11 @@
             this.colNHOM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.sp_ds_loptc_de_nhap_diemTableAdapter = new QLDSV_TC.DS1TableAdapters.sp_ds_loptc_de_nhap_diemTableAdapter();
             this.tableAdapterManager = new QLDSV_TC.DS1TableAdapters.TableAdapterManager();
             this.ds_sv_dki_loptc_de_nhapdiemTableAdapter = new QLDSV_TC.DS1TableAdapters.ds_sv_dki_loptc_de_nhapdiemTableAdapter();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             colDIEM_HM = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcDKY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDSSVDKI)).BeginInit();
@@ -82,6 +82,7 @@
             colDIEM_HM.FieldName = "DIEM_HM";
             colDIEM_HM.MinWidth = 25;
             colDIEM_HM.Name = "colDIEM_HM";
+            colDIEM_HM.UnboundExpression = "[DIEM_CC] * 0.1 + [DIEM_GK] * 0.3 + [DIEM_CK] * 0.6";
             colDIEM_HM.Visible = true;
             colDIEM_HM.VisibleIndex = 5;
             colDIEM_HM.Width = 94;
@@ -352,6 +353,16 @@
             this.panelControl1.Size = new System.Drawing.Size(1779, 69);
             this.panelControl1.TabIndex = 11;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(1524, 21);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(94, 29);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.gcDKY);
@@ -382,16 +393,6 @@
             // ds_sv_dki_loptc_de_nhapdiemTableAdapter
             // 
             this.ds_sv_dki_loptc_de_nhapdiemTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(1524, 21);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(94, 29);
-            this.btnThoat.TabIndex = 9;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // frmNhapDiem
             // 

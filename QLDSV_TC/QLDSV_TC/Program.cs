@@ -111,6 +111,7 @@ namespace QLDSV_TC
             }
             catch (SqlException ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.conn.Close();
                 return ex.State; // chuoi bao loi raiserror từ sql 
             }
@@ -131,11 +132,13 @@ namespace QLDSV_TC
             Application.SetCompatibleTextRenderingDefault(false);
             frmDN = new frmDangNhap();
             Application.Run(frmDN);
+
+            //Application.Run(new Xfrm_BangDiemTongKet());
             //double a = 5.5;
             //string b = a.ToString();
             //Console.WriteLine(b);
             //Console.WriteLine(int.Parse(b));
-            
+
 
             //Application.Run(new frmNhapDiem());
 
