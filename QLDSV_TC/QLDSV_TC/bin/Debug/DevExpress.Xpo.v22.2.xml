@@ -3551,31 +3551,6 @@
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created ExplicitUnitOfWork instance.</param>
     </member>
-    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IDataLayer,System.IDisposable[])">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IObjectLayer,System.IDisposable[])">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPDictionary)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.BeginTransaction">
       <summary>
         <para>Marks the starting point of a database level transaction.</para>
@@ -7912,31 +7887,6 @@
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created Session instance.</param>
     </member>
-    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,DevExpress.Xpo.IDataLayer,System.IDisposable[])">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,DevExpress.Xpo.IObjectLayer,System.IDisposable[])">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPDictionary)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
-      </summary>
-    </member>
     <member name="E:DevExpress.Xpo.Session.AfterBeginTrackingChanges">
       <summary>
         <para>Occurs after a transaction (a database level transaction in an explicit unit of work) has been started tracking changes made to persistent objects.</para>
@@ -12188,31 +12138,6 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created UnitOfWork instance.</param>
     </member>
-    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IDataLayer,System.IDisposable[])">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IObjectLayer,System.IDisposable[])">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPDictionary)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.Xpo.UnitOfWork.CommitChanges">
       <summary>
         <para>Commits all the changes made to persistent objects to a data store.</para>
@@ -12826,16 +12751,6 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
         <para>Initializes a new <see cref="T:DevExpress.Xpo.XPBindingSource"/> instance and adds this instance to container.</para>
       </summary>
       <param name="container">A container that is the owner of the created XPBindingSource.</param>
-    </member>
-    <member name="M:DevExpress.Xpo.XPBindingSource.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPBindingSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPBindingSource.#ctor(System.IServiceProvider)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPBindingSource"/> class with specified settings.</para>
-      </summary>
     </member>
     <member name="P:DevExpress.Xpo.XPBindingSource.BindingBehavior">
       <summary>
@@ -13905,76 +13820,6 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created XPInstantFeedbackSource instance.</param>
     </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs},System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo,System.String,DevExpress.Data.Filtering.CriteriaOperator)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs},System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs},System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type,System.String,DevExpress.Data.Filtering.CriteriaOperator)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class for the specified persistent class, with the specified settings.</para>
@@ -14141,21 +13986,11 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <param name="classInfo">The <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> metadata that describes the target data table in the data store.</param>
     </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.ComponentModel.IContainer,System.IServiceProvider)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackView"/> class with specified settings.</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.ComponentModel.IContainer)">
       <summary>
         <para>Initializes a new <see cref="T:DevExpress.Xpo.XPInstantFeedbackView"/> instance and adds it to a container.</para>
       </summary>
       <param name="container">A container that is the owner of the created XPInstantFeedbackView.</param>
-    </member>
-    <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.IServiceProvider)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackView"/> class with specified settings.</para>
-      </summary>
     </member>
     <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.String,System.String,DevExpress.Xpo.ServerViewProperty[],DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
       <summary>

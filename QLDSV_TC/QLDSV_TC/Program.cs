@@ -18,7 +18,7 @@ namespace QLDSV_TC
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
         // ket noi toi side chu
-        public static String connstr_publisher = "Data Source=DESKTOP-9QNDCS8\\DUCTRONG;Initial Catalog=QLDSV_TC;Integrated Security=True";
+        public static String connstr_publisher = "Data Source=Hajku206;Initial Catalog=QLDSV_TC;Integrated Security=True";
 
         // doc du lieu tu database
         public static SqlDataReader myReader;
