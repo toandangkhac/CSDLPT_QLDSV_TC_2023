@@ -50,13 +50,13 @@
             // 
             // cmbKhoa
             // 
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Location = new System.Drawing.Point(161, 92);
             this.cmbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(391, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(391, 27);
             this.cmbKhoa.TabIndex = 0;
-            this.cmbKhoa.Text = "-- Chọn khoa --";
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             this.cmbKhoa.SelectionChangeCommitted += new System.EventHandler(this.cmbKhoa_SelectionChangeCommitted);
             // 
@@ -64,7 +64,7 @@
             // 
             this.lblKhoa.Location = new System.Drawing.Point(80, 92);
             this.lblKhoa.Name = "lblKhoa";
-            this.lblKhoa.Size = new System.Drawing.Size(28, 16);
+            this.lblKhoa.Size = new System.Drawing.Size(37, 19);
             this.lblKhoa.TabIndex = 1;
             this.lblKhoa.Text = "Khoa";
             this.lblKhoa.Click += new System.EventHandler(this.labelControl1_Click);
@@ -73,35 +73,35 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(71, 143);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(56, 16);
+            this.labelControl2.Size = new System.Drawing.Size(65, 19);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Tài khoản";
             this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // txtLogin
             // 
-            this.txtLogin.EditValue = "";
+            this.txtLogin.EditValue = "GV01";
             this.txtLogin.Location = new System.Drawing.Point(161, 140);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(391, 22);
+            this.txtLogin.Size = new System.Drawing.Size(391, 26);
             this.txtLogin.TabIndex = 3;
             // 
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(71, 194);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(52, 16);
+            this.labelControl3.Size = new System.Drawing.Size(62, 19);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Mật khẩu";
             this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // txtPass
             // 
-            this.txtPass.EditValue = "";
+            this.txtPass.EditValue = "123456";
             this.txtPass.Location = new System.Drawing.Point(161, 191);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(391, 22);
+            this.txtPass.Size = new System.Drawing.Size(391, 26);
             this.txtPass.TabIndex = 5;
             // 
             // btnDangNhap
@@ -138,13 +138,14 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(682, 353);
             this.panelControl1.TabIndex = 8;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // radSinhVien
             // 
             this.radSinhVien.AutoSize = true;
             this.radSinhVien.Location = new System.Drawing.Point(376, 46);
             this.radSinhVien.Name = "radSinhVien";
-            this.radSinhVien.Size = new System.Drawing.Size(82, 20);
+            this.radSinhVien.Size = new System.Drawing.Size(95, 23);
             this.radSinhVien.TabIndex = 14;
             this.radSinhVien.TabStop = true;
             this.radSinhVien.Text = "Sinh Viên";
@@ -157,7 +158,7 @@
             this.radGiangVien.Checked = true;
             this.radGiangVien.Location = new System.Drawing.Point(219, 46);
             this.radGiangVien.Name = "radGiangVien";
-            this.radGiangVien.Size = new System.Drawing.Size(87, 20);
+            this.radGiangVien.Size = new System.Drawing.Size(102, 23);
             this.radGiangVien.TabIndex = 13;
             this.radGiangVien.TabStop = true;
             this.radGiangVien.Text = "Giảng viên";
@@ -175,6 +176,10 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.Appearance.Options.UseForeColor = true;
+            this.btnLogin.AppearanceHovered.BackColor = System.Drawing.Color.White;
+            this.btnLogin.AppearanceHovered.Options.UseBackColor = true;
             this.btnLogin.Location = new System.Drawing.Point(161, 248);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 29);

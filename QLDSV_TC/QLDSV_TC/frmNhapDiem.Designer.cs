@@ -128,7 +128,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(7, 28);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(33, 16);
+            this.labelControl1.Size = new System.Drawing.Size(41, 19);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Khoa:";
             // 
@@ -136,7 +136,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(246, 28);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(61, 16);
+            this.labelControl2.Size = new System.Drawing.Size(74, 19);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Niên khóa:";
             // 
@@ -144,7 +144,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(541, 28);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(42, 16);
+            this.labelControl3.Size = new System.Drawing.Size(54, 19);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "Học kỳ:";
             // 

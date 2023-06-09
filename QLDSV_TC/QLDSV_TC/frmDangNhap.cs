@@ -76,14 +76,14 @@ namespace QLDSV_TC
             }
             LayDSPM("SELECT * FROM Get_Subscribes");
             cmbKhoa.SelectedIndex = 0;
-            cmbKhoa.SelectedIndex = 1;
+
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                // gan ten server de ket noi khi chon khoa tren combobox
+                    // gan ten server de ket noi khi chon khoa tren combobox
                 Program.servername = cmbKhoa.SelectedValue.ToString();
             }
             catch (Exception)
@@ -119,6 +119,7 @@ namespace QLDSV_TC
             }
             else if (radSinhVien.Checked)
             {
+                
                 strLenh = "EXEC sp_lay_thong_tin_sv_tu_login '" + Program.mlogin + "'";
             }
             
@@ -177,6 +178,7 @@ namespace QLDSV_TC
             {
                 cmbKhoa.Visible = false;
                 lblKhoa.Visible = false;
+                cmbKhoa.SelectedIndex = 0;
             }
 
         }
@@ -187,6 +189,7 @@ namespace QLDSV_TC
             {
                 cmbKhoa.Visible = false;
                 lblKhoa.Visible = false;
+                cmbKhoa.SelectedIndex = 0;
             }
             else
             {
@@ -212,6 +215,11 @@ namespace QLDSV_TC
             {
 
             }
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

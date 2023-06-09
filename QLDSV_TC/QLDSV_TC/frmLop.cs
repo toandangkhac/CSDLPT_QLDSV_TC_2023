@@ -18,6 +18,8 @@ namespace QLDSV_TC
         private string maKhoa = "";
         private string maLop = "";
         private int viTriSV = 0;
+        private bool dangThem = false;
+        
         public frmLop()
         {
             InitializeComponent();
@@ -182,7 +184,7 @@ namespace QLDSV_TC
             viTri = bdsLOP.Position;
             bdsLOP.AddNew();
             txtMAKHOA.Text = maKhoa; // sai neu khoa chua co lop nao
-
+            dangThem = true;
             trangThaiChuaGhiLop();
             
         }
@@ -190,7 +192,7 @@ namespace QLDSV_TC
         private void btnHieuChinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             viTri = bdsLOP.Position;
-
+            dangThem = false;
             trangThaiChuaGhiLop();
         }
 
@@ -210,13 +212,17 @@ namespace QLDSV_TC
                 return;
             }
 
-            // MALOP trùng với MALOP trên các side: CHUA CODE
-            SqlDataReader checkMALOP = Program.ExecSqlDataReader("sp_check_malop_trung'" + txtMALOP.Text + "'");
-            if (checkMALOP == null)
+            //// MALOP trùng với MALOP trên các side: CHUA CODE
+            if (dangThem)
             {
-                txtMALOP.Focus();
-                return;
+                SqlDataReader checkMALOP = Program.ExecSqlDataReader("sp_check_malop_trung'" + txtMALOP.Text + "'");
+                if (checkMALOP == null)
+                {
+                    txtMALOP.Focus();
+                    return;
+                }
             }
+                
 
             try
             {

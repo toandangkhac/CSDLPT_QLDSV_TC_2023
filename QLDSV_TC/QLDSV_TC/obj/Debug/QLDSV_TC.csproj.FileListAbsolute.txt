@@ -242,3 +242,4 @@ D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xrpt_ds_donghocphi_theolop.resources
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xfrm_BangDiemTongKet.resources
 D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.frmDongHocPhi.resources
+D:\tailieuNam3_HK2\CSDL_phantan\project_github_new\CSDLPT_QLDSV_TC_2023\QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Xrpt_BangDiemTongKet1.resources

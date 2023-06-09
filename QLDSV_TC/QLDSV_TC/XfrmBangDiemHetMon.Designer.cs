@@ -33,6 +33,8 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.cmbNhom = new System.Windows.Forms.ComboBox();
             this.cmbMonHoc = new System.Windows.Forms.ComboBox();
+            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSXrpt_dssvDkyLTC = new QLDSV_TC.DSXrpt_dssvDkyLTC();
             this.btnPreview = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -40,19 +42,17 @@
             this.cmbHocKy = new System.Windows.Forms.ComboBox();
             this.cmbNienKhoa = new System.Windows.Forms.ComboBox();
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
-            this.dSXrpt_dssvDkyLTC = new QLDSV_TC.DSXrpt_dssvDkyLTC();
-            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mONHOCTableAdapter = new QLDSV_TC.DSXrpt_dssvDkyLTCTableAdapters.MONHOCTableAdapter();
             this.tableAdapterManager = new QLDSV_TC.DSXrpt_dssvDkyLTCTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.dSXrpt_dssvDkyLTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSXrpt_dssvDkyLTC)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(121, 345);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(35, 16);
+            this.labelControl4.Size = new System.Drawing.Size(51, 19);
             this.labelControl4.TabIndex = 28;
             this.labelControl4.Text = "NHÓM";
             // 
@@ -60,7 +60,7 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(121, 282);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(56, 16);
+            this.labelControl5.Size = new System.Drawing.Size(78, 19);
             this.labelControl5.TabIndex = 27;
             this.labelControl5.Text = "MÔN HỌC";
             // 
@@ -80,12 +80,23 @@
             // 
             this.cmbMonHoc.DataSource = this.mONHOCBindingSource;
             this.cmbMonHoc.DisplayMember = "TENMH";
+            this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonHoc.FormattingEnabled = true;
             this.cmbMonHoc.Location = new System.Drawing.Point(281, 279);
             this.cmbMonHoc.Name = "cmbMonHoc";
             this.cmbMonHoc.Size = new System.Drawing.Size(184, 24);
             this.cmbMonHoc.TabIndex = 25;
             this.cmbMonHoc.ValueMember = "MAMH";
+            // 
+            // mONHOCBindingSource
+            // 
+            this.mONHOCBindingSource.DataMember = "MONHOC";
+            this.mONHOCBindingSource.DataSource = this.dSXrpt_dssvDkyLTC;
+            // 
+            // dSXrpt_dssvDkyLTC
+            // 
+            this.dSXrpt_dssvDkyLTC.DataSetName = "DSXrpt_dssvDkyLTC";
+            this.dSXrpt_dssvDkyLTC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnPreview
             // 
@@ -100,7 +111,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(121, 225);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(43, 16);
+            this.labelControl3.Size = new System.Drawing.Size(62, 19);
             this.labelControl3.TabIndex = 23;
             this.labelControl3.Text = "HỌC KỲ";
             // 
@@ -108,7 +119,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(121, 162);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(63, 16);
+            this.labelControl2.Size = new System.Drawing.Size(90, 19);
             this.labelControl2.TabIndex = 22;
             this.labelControl2.Text = "NIÊN KHÓA";
             // 
@@ -116,7 +127,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(121, 87);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(32, 16);
+            this.labelControl1.Size = new System.Drawing.Size(47, 19);
             this.labelControl1.TabIndex = 21;
             this.labelControl1.Text = "KHOA";
             // 
@@ -146,22 +157,13 @@
             // 
             // cmbKhoa
             // 
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Location = new System.Drawing.Point(281, 84);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(184, 24);
             this.cmbKhoa.TabIndex = 18;
             this.cmbKhoa.SelectionChangeCommitted += new System.EventHandler(this.cmbKhoa_SelectionChangeCommitted);
-            // 
-            // dSXrpt_dssvDkyLTC
-            // 
-            this.dSXrpt_dssvDkyLTC.DataSetName = "DSXrpt_dssvDkyLTC";
-            this.dSXrpt_dssvDkyLTC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mONHOCBindingSource
-            // 
-            this.mONHOCBindingSource.DataMember = "MONHOC";
-            this.mONHOCBindingSource.DataSource = this.dSXrpt_dssvDkyLTC;
             // 
             // mONHOCTableAdapter
             // 
@@ -192,8 +194,8 @@
             this.Name = "XfrmBangDiemHetMon";
             this.Text = "XfrmBangDiemHetMon";
             this.Load += new System.EventHandler(this.XfrmBangDiemHetMon_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dSXrpt_dssvDkyLTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSXrpt_dssvDkyLTC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

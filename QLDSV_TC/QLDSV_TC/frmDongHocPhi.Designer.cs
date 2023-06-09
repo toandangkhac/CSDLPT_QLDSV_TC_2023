@@ -34,6 +34,9 @@
             System.Windows.Forms.Label hOCPHILabel;
             System.Windows.Forms.Label mASVLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDongHocPhi));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pnlTTSV = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -153,7 +156,7 @@
             this.panelControl1.Controls.Add(this.pnlTTSV);
             this.panelControl1.Controls.Add(this.pnlSV);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 56);
+            this.panelControl1.Location = new System.Drawing.Point(0, 59);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1153, 143);
             this.panelControl1.TabIndex = 0;
@@ -174,7 +177,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(27, 68);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(38, 16);
+            this.labelControl3.Size = new System.Drawing.Size(48, 19);
             this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Mã lớp";
             // 
@@ -183,14 +186,14 @@
             this.txtMALOP.Location = new System.Drawing.Point(169, 65);
             this.txtMALOP.Name = "txtMALOP";
             this.txtMALOP.Properties.ReadOnly = true;
-            this.txtMALOP.Size = new System.Drawing.Size(187, 22);
+            this.txtMALOP.Size = new System.Drawing.Size(187, 26);
             this.txtMALOP.TabIndex = 7;
             // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(27, 19);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(37, 16);
+            this.labelControl2.Size = new System.Drawing.Size(46, 19);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Họ tên";
             // 
@@ -199,7 +202,7 @@
             this.txtHOTEN.Location = new System.Drawing.Point(169, 16);
             this.txtHOTEN.Name = "txtHOTEN";
             this.txtHOTEN.Properties.ReadOnly = true;
-            this.txtHOTEN.Size = new System.Drawing.Size(187, 22);
+            this.txtHOTEN.Size = new System.Drawing.Size(187, 26);
             this.txtHOTEN.TabIndex = 5;
             // 
             // pnlSV
@@ -217,7 +220,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(5, 19);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(105, 16);
+            this.labelControl1.Size = new System.Drawing.Size(123, 19);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Nhập mã sinh viên";
             // 
@@ -234,14 +237,14 @@
             // 
             this.txtSV.Location = new System.Drawing.Point(189, 16);
             this.txtSV.Name = "txtSV";
-            this.txtSV.Size = new System.Drawing.Size(125, 22);
+            this.txtSV.Size = new System.Drawing.Size(125, 26);
             this.txtSV.TabIndex = 3;
             // 
             // gcHP
             // 
             this.gcHP.DataSource = this.sp_lay_ds_donghocphi_cuasvBindingSource;
             this.gcHP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcHP.Location = new System.Drawing.Point(0, 199);
+            this.gcHP.Location = new System.Drawing.Point(0, 202);
             this.gcHP.MainView = this.gridView1;
             this.gcHP.Name = "gcHP";
             this.gcHP.Size = new System.Drawing.Size(1153, 270);
@@ -458,7 +461,7 @@
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.barManager1;
-            this.barDockControl3.Size = new System.Drawing.Size(1153, 56);
+            this.barDockControl3.Size = new System.Drawing.Size(1153, 59);
             // 
             // barDockControlBottom
             // 
@@ -472,17 +475,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 56);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 59);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 680);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 677);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1153, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(1153, 59);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 680);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 677);
             // 
             // btnDSGV
             // 
@@ -501,9 +504,9 @@
             this.panelControl2.Controls.Add(this.dgvCTHP);
             this.panelControl2.Controls.Add(this.pnlThemHP);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 469);
+            this.panelControl2.Location = new System.Drawing.Point(0, 472);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1153, 267);
+            this.panelControl2.Size = new System.Drawing.Size(1153, 264);
             this.panelControl2.TabIndex = 6;
             // 
             // dgvCTHP
@@ -511,17 +514,41 @@
             this.dgvCTHP.AutoGenerateColumns = false;
             this.dgvCTHP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCTHP.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCTHP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCTHP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCTHP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nGAYDONGDataGridViewTextBoxColumn,
             this.sOTIENDONGDataGridViewTextBoxColumn});
             this.dgvCTHP.DataSource = this.cT_DONGHOCPHIBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCTHP.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCTHP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCTHP.Location = new System.Drawing.Point(497, 2);
             this.dgvCTHP.Name = "dgvCTHP";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCTHP.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCTHP.RowHeadersWidth = 51;
             this.dgvCTHP.RowTemplate.Height = 24;
-            this.dgvCTHP.Size = new System.Drawing.Size(654, 263);
+            this.dgvCTHP.Size = new System.Drawing.Size(654, 260);
             this.dgvCTHP.TabIndex = 1;
             // 
             // nGAYDONGDataGridViewTextBoxColumn
@@ -556,7 +583,7 @@
             this.pnlThemHP.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlThemHP.Location = new System.Drawing.Point(2, 2);
             this.pnlThemHP.Name = "pnlThemHP";
-            this.pnlThemHP.Size = new System.Drawing.Size(495, 263);
+            this.pnlThemHP.Size = new System.Drawing.Size(495, 260);
             this.pnlThemHP.TabIndex = 0;
             // 
             // txtMASV
@@ -566,7 +593,7 @@
             this.txtMASV.MenuManager = this.barManager1;
             this.txtMASV.Name = "txtMASV";
             this.txtMASV.Properties.ReadOnly = true;
-            this.txtMASV.Size = new System.Drawing.Size(162, 22);
+            this.txtMASV.Size = new System.Drawing.Size(162, 26);
             this.txtMASV.TabIndex = 7;
             // 
             // spinHOCPHI
@@ -582,7 +609,7 @@
             this.spinHOCPHI.Name = "spinHOCPHI";
             this.spinHOCPHI.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinHOCPHI.Size = new System.Drawing.Size(162, 24);
+            this.spinHOCPHI.Size = new System.Drawing.Size(162, 26);
             this.spinHOCPHI.TabIndex = 5;
             // 
             // cmbHOCKY

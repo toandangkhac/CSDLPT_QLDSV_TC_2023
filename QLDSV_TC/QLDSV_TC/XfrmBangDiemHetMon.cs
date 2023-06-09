@@ -40,6 +40,31 @@ namespace QLDSV_TC
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
+            if (cmbKhoa.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn khoa!", "", MessageBoxButtons.OK);
+                cmbKhoa.Focus();
+            }
+            if (cmbMonHoc.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn môn học!", "", MessageBoxButtons.OK);
+                cmbMonHoc.Focus();
+            }
+            if (cmbHocKy.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn học kỳ!", "", MessageBoxButtons.OK);
+                cmbHocKy.Focus();
+            }
+            if (cmbNienKhoa.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn niên khóa!", "", MessageBoxButtons.OK);
+                cmbNienKhoa.Focus();
+            }
+            if (cmbNhom.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn nhóm!", "", MessageBoxButtons.OK);
+                cmbNhom.Focus();
+            }
             Xrpt_BangDiemHetMon xfrm = new Xrpt_BangDiemHetMon(cmbNienKhoa.Text, int.Parse(cmbHocKy.Text), cmbMonHoc.SelectedValue.ToString(), int.Parse(cmbNhom.Text));
             xfrm.xrlblKHOA.Text = cmbKhoa.Text;
             xfrm.xrlblNIENKHOA.Text = cmbNienKhoa.Text;

@@ -15,6 +15,7 @@ namespace QLDSV_TC
         private string maKhoa = "";
         private string maLop = "";
         private int viTri = 0;
+        private bool dangThem =false;
         public frmLopTinChi()
         {
             InitializeComponent();
@@ -35,15 +36,17 @@ namespace QLDSV_TC
         }
         private void frmLopTinChi_Load(object sender, EventArgs e)
         {
-            dS1.EnforceConstraints = false;
+          
+
+            dS_MoLTC.EnforceConstraints = false;
             try
             {
                 //Program.connstr = "Data Source=DESKTOP-9QNDCS8\\DUCTRONG;Initial Catalog=QLDSV_TC;Integrated Security=True";
-                this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.lOPTINCHITableAdapter1.Fill(this.dS1.LOPTINCHI);
-                this.dANGKYTableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.dANGKYTableAdapter1.Fill(this.dS1.DANGKY);
-                cmbMONHOC.DataSource = Program.ExecSqlDataTable("SELECT * FROM ds_monhoc");
+                this.dSLTCTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dSLTCTableAdapter.Fill(this.dS_MoLTC.DSLTC);
+                this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dANGKYTableAdapter.Fill(this.dS_MoLTC.DANGKY);
+                cmbMONHOC.DataSource = Program.ExecSqlDataTable("SELECT * FROM MONHOC");
                 cmbMONHOC.DisplayMember = "TENMH";
                 cmbMONHOC.ValueMember = "MAMH";
                 cmbGV.DataSource = Program.ExecSqlDataTable("SELECT MAGV, TENGV = HO + ' ' + TEN FROM GIANGVIEN");
@@ -80,8 +83,9 @@ namespace QLDSV_TC
                 cmbKhoa.Enabled = true;
             else
                 cmbKhoa.Enabled = false;
-
+            
             trangThaiBanDau();
+            
 
         }
 
@@ -90,49 +94,7 @@ namespace QLDSV_TC
 
         }
 
-        private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //// kiem tra hien tai combobox da co so lieu chua: chua nhan datasource
-            //if (cmbKhoa.SelectedIndex.ToString() == "System.Data.DataRowView")
-            //    return;
-            //// neu chon duoc 1 khoa trong combobox
-
-            //Program.servername = cmbKhoa.SelectedValue.ToString();
-
-            //// truong hop chuyen khoa khac voi khoa luc dang nhap
-            //if (cmbKhoa.SelectedIndex != Program.mKhoa)
-            //{
-            //    Program.mlogin = Program.remotelogin;
-            //    Program.password = Program.remotepassword;
-            //}
-            //else
-            //{
-            //    Program.mlogin = Program.mloginDN;
-            //    Program.password = Program.passwordDN;
-            //}
-
-            //// server mảnh chua mo
-            //if (Program.KetNoi() == 0)
-            //{
-            //    MessageBox.Show("Lỗi kết nối tới Khoa mới!", "", MessageBoxButtons.OK);
-            //    return;
-            //}
-            //try
-            //{
-            //    this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
-            //    this.lOPTINCHITableAdapter1.Fill(this.dS1.LOPTINCHI);
-            //    this.dANGKYTableAdapter1.Connection.ConnectionString = Program.connstr;
-            //    this.dANGKYTableAdapter1.Fill(this.dS1.DANGKY);
-            //    cmbMONHOC.DataSource = Program.ExecSqlDataTable("SELECT * FROM ds_monhoc");
-            //    cmbMONHOC.DisplayMember = "TENMH";
-            //    cmbMONHOC.ValueMember = "MAMH";
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Lỗi chuyển khoa!", "", MessageBoxButtons.OK);
-            //}
-            
-        }
+        
 
         private void cmbKhoa_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -163,13 +125,11 @@ namespace QLDSV_TC
             }
             try
             {
-                this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.lOPTINCHITableAdapter1.Fill(this.dS1.LOPTINCHI);
-                this.dANGKYTableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.dANGKYTableAdapter1.Fill(this.dS1.DANGKY);
-                cmbMONHOC.DataSource = Program.ExecSqlDataTable("SELECT * FROM ds_monhoc");
-                cmbMONHOC.DisplayMember = "TENMH";
-                cmbMONHOC.ValueMember = "MAMH";
+                this.dSLTCTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dSLTCTableAdapter.Fill(this.dS_MoLTC.DSLTC);
+                this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dANGKYTableAdapter.Fill(this.dS_MoLTC.DANGKY);
+                
             }
             catch (Exception ex)
             {
@@ -180,9 +140,17 @@ namespace QLDSV_TC
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             viTri = bdsLOPTC.Position;
-            bdsLOPTC.AddNew();
             txtMAKHOA.Text = maKhoa;
+            cmbNIENKHOA.Text = "";
+            cmbHOCKY.Text = "";
+            cmbMONHOC.Text = "";
+            cmbNHOM.Text = "";
+            cmbGV.Text = "";
             trangThaiChuaGhi();
+            chkHUYLOP.Visible = false;
+            lblHUYLOP.Visible = false;
+            dangThem = true;
+            Console.WriteLine(chkHUYLOP.Checked);
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -224,17 +192,55 @@ namespace QLDSV_TC
                 spinSVTOITHIEU.Focus();
                 return;
             }
-            
-            
+
+
 
             
             
             try
             {
-                bdsLOPTC.EndEdit();
-                bdsLOPTC.ResetCurrentItem();
-                this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.lOPTINCHITableAdapter1.Update(this.dS1.LOPTINCHI);
+                if (dangThem)
+                {
+                    int moLop = Program.ExecSqlNonQuery("INSERT INTO LOPTINCHI(NIENKHOA, HOCKY, MAMH, NHOM, MAGV, MAKHOA, SOSVTOITHIEU, HUYLOP) VALUES('" +
+                        cmbNIENKHOA.Text + "','"
+                        + cmbHOCKY.Text + "','"
+                        + cmbMONHOC.SelectedValue.ToString() + "','"
+                        + cmbNHOM.Text + "','"
+                        + cmbGV.SelectedValue.ToString() + "','"
+                        + txtMAKHOA.Text + "',"
+                        + spinSVTOITHIEU.Text + ",'"
+                        + chkHUYLOP.Checked + "')"
+                        );
+                    if (moLop != 0)
+                    {
+                        MessageBox.Show("Lỗi ghi lớp tín chỉ, vui lòng kiểm tra lại thông tin đã nhập!", "", MessageBoxButtons.OK);
+                        return;
+                    }
+                }
+                else
+                {
+                    int maltc = int.Parse(((DataRowView)bdsLOPTC[bdsLOPTC.Position])["MALTC"].ToString());
+                    int suaLop = Program.ExecSqlNonQuery("UPDATE LOPTINCHI " +
+                        "SET NIENKHOA= '" + cmbNIENKHOA.Text + "'," +
+                        "HOCKY='" + cmbHOCKY.Text + "'," +
+                        "MAMH='" + cmbMONHOC.SelectedValue.ToString() + "'," +
+                        "NHOM= " + cmbNHOM.Text + "," +
+                        "MAGV='" + cmbGV.SelectedValue.ToString() + "'," +
+                        "MAKHOA='" + txtMAKHOA.Text + "'," +
+                        "SOSVTOITHIEU= " + spinSVTOITHIEU.Text + "," +
+                        "HUYLOP ='" + chkHUYLOP.Checked + "'" +
+                        "WHERE MALTC =" + maltc.ToString()
+
+                        ) ;
+                    if (suaLop != 0)
+                    {
+                        MessageBox.Show("Lỗi ghi lớp tín chỉ, vui lòng kiểm tra lại thông tin đã nhập!", "", MessageBoxButtons.OK);
+                        return;
+                    }
+                }
+                    
+                
+                
             }
             catch
             {
@@ -257,6 +263,9 @@ namespace QLDSV_TC
         {
             viTri = bdsLOPTC.Position;
             trangThaiChuaGhi();
+            chkHUYLOP.Visible = true;
+            lblHUYLOP.Visible = true;
+            dangThem = false;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -268,21 +277,29 @@ namespace QLDSV_TC
                 return;
             }
 
-            try
+            if (MessageBox.Show("Bạn có thật sự muốn xóa lớp tín chỉ này không?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                try
             {
                 // giu lai vi tri con tro chuot dang tro toi giang vien chon de xoa
                 maltc = ((DataRowView)bdsLOPTC[bdsLOPTC.Position])["MALTC"].ToString();
                 bdsLOPTC.RemoveCurrent();
-                this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.lOPTINCHITableAdapter1.Update(this.dS1.LOPTINCHI);
+                int moLop = Program.ExecSqlNonQuery("DELETE FROM LOPTINCHI WHERE MALTC=" + maltc.ToString());
+                  
+                if (moLop != 0)
+                {
+                    MessageBox.Show("Lỗi xóa lớp tín chỉ, vui lòng kiểm tra lại!", "", MessageBoxButtons.OK);
+                    return;
+                }
+                //this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
+                //this.lOPTINCHITableAdapter1.Update(this.dS1.LOPTINCHI);
             }
             catch (Exception ex)
             {
                 // truong hop cap nhat tren db bi loi
                 MessageBox.Show("Lỗi xóa lớp tín chỉ. Bạn hãy thử xóa lại\n" + ex.Message, "", MessageBoxButtons.OK);
                 // do du lieu tu db vào lại giao diện nếu xóa không thành công
-                this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.lOPTINCHITableAdapter1.Update(this.dS1.LOPTINCHI);
+                this.dSLTCTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dSLTCTableAdapter.Fill(this.dS_MoLTC.DSLTC);
                 // hiển thị dòng được trỏ tới để xóa ở trên
                 bdsLOPTC.Position = bdsLOPTC.Find("MALTC", maltc);
                 return;
@@ -294,8 +311,8 @@ namespace QLDSV_TC
         {
             try
             {
-                this.lOPTINCHITableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.lOPTINCHITableAdapter1.Update(this.dS1.LOPTINCHI);
+                this.dSLTCTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dSLTCTableAdapter.Fill(this.dS_MoLTC.DSLTC);
 
             }
             catch(Exception ex)
@@ -311,7 +328,7 @@ namespace QLDSV_TC
             this.Close();
         }
 
-        private void nHOMLabel_Click(object sender, EventArgs e)
+        private void gcLOPTC_Click(object sender, EventArgs e)
         {
 
         }

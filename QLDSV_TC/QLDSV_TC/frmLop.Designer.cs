@@ -158,7 +158,7 @@
             mALOPLabel.AutoSize = true;
             mALOPLabel.Location = new System.Drawing.Point(23, 31);
             mALOPLabel.Name = "mALOPLabel";
-            mALOPLabel.Size = new System.Drawing.Size(72, 16);
+            mALOPLabel.Size = new System.Drawing.Size(87, 19);
             mALOPLabel.TabIndex = 0;
             mALOPLabel.Text = "Mã lớp (*):";
             // 
@@ -167,7 +167,7 @@
             tENLOPLabel.AutoSize = true;
             tENLOPLabel.Location = new System.Drawing.Point(18, 83);
             tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(77, 16);
+            tENLOPLabel.Size = new System.Drawing.Size(90, 19);
             tENLOPLabel.TabIndex = 2;
             tENLOPLabel.Text = "Tên lớp (*):";
             // 
@@ -176,7 +176,7 @@
             kHOAHOCLabel.AutoSize = true;
             kHOAHOCLabel.Location = new System.Drawing.Point(544, 83);
             kHOAHOCLabel.Name = "kHOAHOCLabel";
-            kHOAHOCLabel.Size = new System.Drawing.Size(86, 16);
+            kHOAHOCLabel.Size = new System.Drawing.Size(104, 19);
             kHOAHOCLabel.TabIndex = 4;
             kHOAHOCLabel.Text = "Khóa học (*):";
             // 
@@ -185,7 +185,7 @@
             mAKHOALabel.AutoSize = true;
             mAKHOALabel.Location = new System.Drawing.Point(551, 31);
             mAKHOALabel.Name = "mAKHOALabel";
-            mAKHOALabel.Size = new System.Drawing.Size(82, 16);
+            mAKHOALabel.Size = new System.Drawing.Size(97, 19);
             mAKHOALabel.TabIndex = 6;
             mAKHOALabel.Text = "Mã khoa (*):";
             // 
@@ -194,7 +194,7 @@
             mASVLabel.AutoSize = true;
             mASVLabel.Location = new System.Drawing.Point(32, 28);
             mASVLabel.Name = "mASVLabel";
-            mASVLabel.Size = new System.Drawing.Size(105, 16);
+            mASVLabel.Size = new System.Drawing.Size(125, 19);
             mASVLabel.TabIndex = 0;
             mASVLabel.Text = "Mã sinh viên (*):";
             // 
@@ -203,7 +203,7 @@
             hOLabel.AutoSize = true;
             hOLabel.Location = new System.Drawing.Point(49, 80);
             hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(49, 16);
+            hOLabel.Size = new System.Drawing.Size(60, 19);
             hOLabel.TabIndex = 2;
             hOLabel.Text = "Họ (*):";
             // 
@@ -212,7 +212,7 @@
             tENLabel.AutoSize = true;
             tENLabel.Location = new System.Drawing.Point(488, 79);
             tENLabel.Name = "tENLabel";
-            tENLabel.Size = new System.Drawing.Size(56, 16);
+            tENLabel.Size = new System.Drawing.Size(64, 19);
             tENLabel.TabIndex = 4;
             tENLabel.Text = "Tên (*):";
             // 
@@ -221,7 +221,7 @@
             pHAILabel.AutoSize = true;
             pHAILabel.Location = new System.Drawing.Point(482, 126);
             pHAILabel.Name = "pHAILabel";
-            pHAILabel.Size = new System.Drawing.Size(58, 16);
+            pHAILabel.Size = new System.Drawing.Size(69, 19);
             pHAILabel.TabIndex = 6;
             pHAILabel.Text = "Phái (*):";
             // 
@@ -230,7 +230,7 @@
             dIACHILabel.AutoSize = true;
             dIACHILabel.Location = new System.Drawing.Point(26, 175);
             dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(51, 16);
+            dIACHILabel.Size = new System.Drawing.Size(63, 19);
             dIACHILabel.TabIndex = 8;
             dIACHILabel.Text = "Địa chỉ:";
             // 
@@ -239,7 +239,7 @@
             nGAYSINHLabel.AutoSize = true;
             nGAYSINHLabel.Location = new System.Drawing.Point(7, 128);
             nGAYSINHLabel.Name = "nGAYSINHLabel";
-            nGAYSINHLabel.Size = new System.Drawing.Size(67, 16);
+            nGAYSINHLabel.Size = new System.Drawing.Size(81, 19);
             nGAYSINHLabel.TabIndex = 10;
             nGAYSINHLabel.Text = "Ngày sinh:";
             // 
@@ -248,7 +248,7 @@
             mALOPLabel1.AutoSize = true;
             mALOPLabel1.Location = new System.Drawing.Point(471, 28);
             mALOPLabel1.Name = "mALOPLabel1";
-            mALOPLabel1.Size = new System.Drawing.Size(72, 16);
+            mALOPLabel1.Size = new System.Drawing.Size(87, 19);
             mALOPLabel1.TabIndex = 12;
             mALOPLabel1.Text = "Mã lớp (*):";
             // 
@@ -257,7 +257,7 @@
             dANGHIHOCLabel.AutoSize = true;
             dANGHIHOCLabel.Location = new System.Drawing.Point(8, 249);
             dANGHIHOCLabel.Name = "dANGHIHOCLabel";
-            dANGHIHOCLabel.Size = new System.Drawing.Size(116, 16);
+            dANGHIHOCLabel.Size = new System.Drawing.Size(136, 19);
             dANGHIHOCLabel.TabIndex = 14;
             dANGHIHOCLabel.Text = "Đang nghỉ học (*):";
             // 
@@ -266,7 +266,7 @@
             pASSWORDLabel.AutoSize = true;
             pASSWORDLabel.Location = new System.Drawing.Point(366, 249);
             pASSWORDLabel.Name = "pASSWORDLabel";
-            pASSWORDLabel.Size = new System.Drawing.Size(80, 16);
+            pASSWORDLabel.Size = new System.Drawing.Size(102, 19);
             pASSWORDLabel.TabIndex = 16;
             pASSWORDLabel.Text = "PASSWORD:";
             // 
@@ -575,7 +575,7 @@
             this.txtPASS.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "PASSWORD", true));
             this.txtPASS.Location = new System.Drawing.Point(535, 246);
             this.txtPASS.Name = "txtPASS";
-            this.txtPASS.Size = new System.Drawing.Size(269, 22);
+            this.txtPASS.Size = new System.Drawing.Size(269, 26);
             this.txtPASS.TabIndex = 17;
             // 
             // chkNGHIHOC
@@ -593,7 +593,7 @@
             this.txtMALOPSV.Location = new System.Drawing.Point(605, 25);
             this.txtMALOPSV.Name = "txtMALOPSV";
             this.txtMALOPSV.Properties.ReadOnly = true;
-            this.txtMALOPSV.Size = new System.Drawing.Size(233, 22);
+            this.txtMALOPSV.Size = new System.Drawing.Size(233, 26);
             this.txtMALOPSV.TabIndex = 13;
             // 
             // dateNGAYSINH
@@ -606,7 +606,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNGAYSINH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNGAYSINH.Size = new System.Drawing.Size(243, 22);
+            this.dateNGAYSINH.Size = new System.Drawing.Size(243, 26);
             this.dateNGAYSINH.TabIndex = 11;
             // 
             // txtDIACHI
@@ -614,7 +614,7 @@
             this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "DIACHI", true));
             this.txtDIACHI.Location = new System.Drawing.Point(194, 175);
             this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(243, 22);
+            this.txtDIACHI.Size = new System.Drawing.Size(243, 26);
             this.txtDIACHI.TabIndex = 9;
             // 
             // chkPHAI
@@ -631,7 +631,7 @@
             this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "TEN", true));
             this.txtTEN.Location = new System.Drawing.Point(605, 77);
             this.txtTEN.Name = "txtTEN";
-            this.txtTEN.Size = new System.Drawing.Size(233, 22);
+            this.txtTEN.Size = new System.Drawing.Size(233, 26);
             this.txtTEN.TabIndex = 5;
             // 
             // txtHO
@@ -639,7 +639,7 @@
             this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "HO", true));
             this.txtHO.Location = new System.Drawing.Point(194, 80);
             this.txtHO.Name = "txtHO";
-            this.txtHO.Size = new System.Drawing.Size(243, 22);
+            this.txtHO.Size = new System.Drawing.Size(243, 26);
             this.txtHO.TabIndex = 3;
             // 
             // txtMASV
@@ -647,7 +647,7 @@
             this.txtMASV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "MASV", true));
             this.txtMASV.Location = new System.Drawing.Point(194, 28);
             this.txtMASV.Name = "txtMASV";
-            this.txtMASV.Size = new System.Drawing.Size(243, 22);
+            this.txtMASV.Size = new System.Drawing.Size(243, 26);
             this.txtMASV.TabIndex = 1;
             // 
             // labelControl1
@@ -812,7 +812,7 @@
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.barManager1;
-            this.barDockControl3.Size = new System.Drawing.Size(2105, 56);
+            this.barDockControl3.Size = new System.Drawing.Size(2105, 59);
             // 
             // barDockControlBottom
             // 
@@ -826,17 +826,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 56);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 59);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 777);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 774);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(2105, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(2105, 59);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 777);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 774);
             // 
             // btnDSGV
             // 
@@ -854,7 +854,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(5, 89);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(28, 16);
+            this.labelControl3.Size = new System.Drawing.Size(37, 19);
             this.labelControl3.TabIndex = 27;
             this.labelControl3.Text = "Khoa";
             // 

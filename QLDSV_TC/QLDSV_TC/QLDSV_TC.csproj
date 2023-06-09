@@ -58,7 +58,9 @@
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v22.2.Extensions, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -100,6 +102,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSXrpt_dssvDkyLTC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MoLTC.cs">
+      <DependentUpon>DS_MoLTC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MoLTC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MoLTC.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmDangKyLTC.cs">
       <SubType>Form</SubType>
@@ -349,6 +359,17 @@
     </None>
     <None Include="DSXrpt_dssvDkyLTC.xss">
       <DependentUpon>DSXrpt_dssvDkyLTC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MoLTC.xsc">
+      <DependentUpon>DS_MoLTC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MoLTC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MoLTC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_MoLTC.xss">
+      <DependentUpon>DS_MoLTC.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

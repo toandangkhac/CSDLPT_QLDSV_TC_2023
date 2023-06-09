@@ -31,6 +31,21 @@ namespace QLDSV_TC
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
+            if(cmbMALOP.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã lớp!", "", MessageBoxButtons.OK);
+                cmbMALOP.Focus();
+            }
+            if (cmbNienKhoa.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn niên khóa!", "", MessageBoxButtons.OK);
+                cmbNienKhoa.Focus();
+            }
+            if (cmbHocKy.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn học kỳ!", "", MessageBoxButtons.OK);
+                cmbHocKy.Focus();
+            }
             Xrpt_ds_donghocphi_theolop xfrm = new Xrpt_ds_donghocphi_theolop(cmbMALOP.SelectedValue.ToString(), cmbNienKhoa.Text, Int32.Parse(cmbHocKy.Text));
             SqlDataReader tenkhoa = Program.ExecSqlDataReader("SELECT TENKHOA FROM KHOA WHERE MAKHOA = (SELECT MAKHOA FROM LOP WHERE MALOP = '" + cmbMALOP.Text + "')");
             tenkhoa.Read();

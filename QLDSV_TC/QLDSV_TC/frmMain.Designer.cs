@@ -88,7 +88,7 @@
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(45);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -115,17 +115,17 @@
             this.barButtonItem18,
             this.barButtonItem19});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ribbonControl1.MaxItemId = 24;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 385;
+            this.ribbonControl1.OptionsMenuMinWidth = 495;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribPGVKHOA,
             this.ribKeToan,
             this.ribSinhVien,
             this.ribBaoCao});
-            this.ribbonControl1.Size = new System.Drawing.Size(1245, 209);
+            this.ribbonControl1.Size = new System.Drawing.Size(1601, 212);
             // 
             // barButtonItem1
             // 
@@ -186,6 +186,10 @@
             this.btnDMLop.Id = 9;
             this.btnDMLop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDMLop.ImageOptions.Image")));
             this.btnDMLop.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDMLop.ImageOptions.LargeImage")));
+            this.btnDMLop.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDMLop.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnDMLop.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDMLop.ItemAppearance.Normal.Options.UseFont = true;
             this.btnDMLop.Name = "btnDMLop";
             this.btnDMLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDMLop_ItemClick);
             // 
@@ -442,9 +446,10 @@
             this.HOTEN,
             this.NHOM,
             this.TENSV});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 603);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 722);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1245, 26);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1601, 26);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -506,13 +511,14 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1245, 629);
+            this.ClientSize = new System.Drawing.Size(1601, 748);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbonControl1);
+            this.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

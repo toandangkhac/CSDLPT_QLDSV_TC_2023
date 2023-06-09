@@ -266,7 +266,7 @@
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.barManager1;
-            this.barDockControl3.Size = new System.Drawing.Size(800, 56);
+            this.barDockControl3.Size = new System.Drawing.Size(800, 59);
             // 
             // barDockControlBottom
             // 
@@ -280,17 +280,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 56);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 59);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 374);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 371);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(800, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(800, 59);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 374);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 371);
             // 
             // btnDSGV
             // 
@@ -308,7 +308,7 @@
             // 
             this.gcMONHOC.DataSource = this.bdsMONHOC;
             this.gcMONHOC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcMONHOC.Location = new System.Drawing.Point(0, 56);
+            this.gcMONHOC.Location = new System.Drawing.Point(0, 59);
             this.gcMONHOC.MainView = this.gridView1;
             this.gcMONHOC.MenuManager = this.barManager1;
             this.gcMONHOC.Name = "gcMONHOC";
@@ -387,9 +387,9 @@
             // 
             this.panelControl1.Controls.Add(this.pnlThemMH);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 256);
+            this.panelControl1.Location = new System.Drawing.Point(0, 259);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(800, 174);
+            this.panelControl1.Size = new System.Drawing.Size(800, 171);
             this.panelControl1.TabIndex = 5;
             // 
             // pnlThemMH
@@ -405,7 +405,7 @@
             this.pnlThemMH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlThemMH.Location = new System.Drawing.Point(2, 2);
             this.pnlThemMH.Name = "pnlThemMH";
-            this.pnlThemMH.Size = new System.Drawing.Size(796, 170);
+            this.pnlThemMH.Size = new System.Drawing.Size(796, 167);
             this.pnlThemMH.TabIndex = 0;
             // 
             // txtTENMH
@@ -414,7 +414,7 @@
             this.txtTENMH.Location = new System.Drawing.Point(141, 65);
             this.txtTENMH.MenuManager = this.barManager1;
             this.txtTENMH.Name = "txtTENMH";
-            this.txtTENMH.Size = new System.Drawing.Size(232, 22);
+            this.txtTENMH.Size = new System.Drawing.Size(232, 26);
             this.txtTENMH.TabIndex = 3;
             // 
             // txtMAMH
@@ -423,7 +423,7 @@
             this.txtMAMH.Location = new System.Drawing.Point(141, 21);
             this.txtMAMH.MenuManager = this.barManager1;
             this.txtMAMH.Name = "txtMAMH";
-            this.txtMAMH.Size = new System.Drawing.Size(232, 22);
+            this.txtMAMH.Size = new System.Drawing.Size(232, 26);
             this.txtMAMH.TabIndex = 1;
             // 
             // spinSOTIETTH
@@ -439,7 +439,7 @@
             this.spinSOTIETTH.Name = "spinSOTIETTH";
             this.spinSOTIETTH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinSOTIETTH.Size = new System.Drawing.Size(193, 24);
+            this.spinSOTIETTH.Size = new System.Drawing.Size(193, 26);
             this.spinSOTIETTH.TabIndex = 7;
             // 
             // spinSOTIETLT
@@ -455,7 +455,7 @@
             this.spinSOTIETLT.Name = "spinSOTIETLT";
             this.spinSOTIETLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinSOTIETLT.Size = new System.Drawing.Size(193, 24);
+            this.spinSOTIETLT.Size = new System.Drawing.Size(193, 26);
             this.spinSOTIETLT.TabIndex = 5;
             // 
             // mONHOCTableAdapter1
